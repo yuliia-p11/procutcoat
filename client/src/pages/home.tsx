@@ -11,7 +11,7 @@ function FullHeroSection() {
         <span className="text-muted-foreground text-sm font-medium z-10">VIDEO_PLACEHOLDER_2</span>
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 pb-16 sm:pb-20 lg:pb-24">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
         <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight max-w-3xl mb-6" data-testid="text-full-hero-title">
           Full-Service Metal Fabrication & Finishing in Orlando, FL
         </h1>
@@ -29,7 +29,7 @@ function FullHeroSection() {
 function TaglineSection() {
   return (
     <section id="tagline" className="relative pt-24 sm:pt-28 pb-16 lg:pb-20" data-testid="section-tagline">
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-medium text-foreground/80 leading-relaxed max-w-4xl mb-12 lg:mb-16" data-testid="text-tagline">
           Powder coating, precision cutting, and sheet-metal bending — handled under one roof for faster turnaround, lower total cost, and consistent results.
         </h3>
@@ -76,7 +76,7 @@ function HeroSection() {
   return (
     <section className="relative py-20 lg:py-28" data-testid="section-hero">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-      <div className="relative max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-10">
           <span className="inline-block text-primary text-xs font-medium tracking-widest uppercase mb-4" data-testid="text-hero-label">
             New Technology
@@ -103,7 +103,7 @@ function HeroSection() {
 function WhySection() {
   return (
     <section className="py-20 lg:py-28 bg-card/30" data-testid="section-why">
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
           <div>
             <h4 className="font-heading text-lg font-semibold text-accent mb-4" data-testid="text-why-title">
@@ -130,7 +130,7 @@ function WhySection() {
 function WorkshopSection() {
   return (
     <section className="py-20 lg:py-28" data-testid="section-workshop">
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div>
             <div className="mb-4">
@@ -181,7 +181,7 @@ function WorkshopSection() {
 function VideoSection() {
   return (
     <section className="py-20 lg:py-28 bg-card/30" data-testid="section-video">
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-md overflow-hidden aspect-video bg-muted flex items-center justify-center mb-16" data-testid="video-placeholder">
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/20" />
           <button
@@ -230,7 +230,7 @@ function VideoSection() {
 function HotspotSection() {
   return (
     <section className="py-20 lg:py-28" data-testid="section-hotspot">
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-md overflow-hidden aspect-[16/9] bg-muted flex items-center justify-center" data-testid="img-hotspot-placeholder">
           <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           <span className="text-muted-foreground text-sm font-medium z-10">IMAGE_PLACEHOLDER_2</span>
@@ -260,7 +260,7 @@ function HotspotSection() {
 function PerfectForSection() {
   return (
     <section className="py-20 lg:py-28 bg-card/30" data-testid="section-perfect">
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div className="relative rounded-md overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center" data-testid="img-perfect-placeholder">
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
@@ -293,7 +293,7 @@ function PerfectForSection() {
 function StatsSection() {
   return (
     <section className="py-20 lg:py-28" data-testid="section-stats">
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-6">
           {[
             { value: "50K", label: "Parts coated with Pecica" },
@@ -351,7 +351,7 @@ function FAQSection() {
 
   return (
     <section className="py-20 lg:py-28" data-testid="section-faq">
-      <div className="max-w-3xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-10" data-testid="text-faq-title">
           FAQ
         </h2>
@@ -394,7 +394,7 @@ function FAQSection() {
 function CTASection() {
   return (
     <section id="contact" className="py-20 lg:py-28 bg-card/30" data-testid="section-cta">
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="text-cta-title">
           Ready to start a project?
         </h2>
@@ -425,7 +425,7 @@ function CTASection() {
 function Footer() {
   return (
     <footer className="py-8 border-t border-border" data-testid="section-footer">
-      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 flex flex-wrap items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
         <span className="font-heading text-sm font-semibold text-foreground/50">
           <span className="text-primary">Pro</span>Cut & Coat
         </span>
