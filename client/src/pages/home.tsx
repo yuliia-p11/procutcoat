@@ -79,9 +79,31 @@ function Header() {
   );
 }
 
+function FullHeroSection() {
+  return (
+    <section id="home" className="relative h-screen w-full flex items-end" data-testid="section-full-hero">
+      <div className="absolute inset-0 bg-muted flex items-center justify-center">
+        <span className="text-muted-foreground text-sm font-medium z-10">VIDEO_PLACEHOLDER_2</span>
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
+        <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight max-w-3xl mb-6" data-testid="text-full-hero-title">
+          Full-Service Metal Fabrication & Finishing in Orlando, FL
+        </h1>
+        <a href="#tagline">
+          <Button className="bg-primary text-white border border-primary-border" data-testid="button-learn-more">
+            Learn more
+            <ChevronRight className="w-4 h-4 ml-1" />
+          </Button>
+        </a>
+      </div>
+    </section>
+  );
+}
+
 function TaglineSection() {
   return (
-    <section id="home" className="relative pt-24 sm:pt-28 pb-16 lg:pb-20" data-testid="section-tagline">
+    <section id="tagline" className="relative pt-24 sm:pt-28 pb-16 lg:pb-20" data-testid="section-tagline">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-medium text-foreground/80 leading-relaxed max-w-4xl mb-12 lg:mb-16" data-testid="text-tagline">
           Powder coating, precision cutting, and sheet-metal bending — handled under one roof for faster turnaround, lower total cost, and consistent results.
@@ -469,6 +491,7 @@ export default function Home() {
   return (
     <div className="bg-background text-foreground min-h-screen">
       <Header />
+      <FullHeroSection />
       <TaglineSection />
       <HeroSection />
       <WhySection />
