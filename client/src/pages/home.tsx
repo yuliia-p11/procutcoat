@@ -109,7 +109,7 @@ function TaglineSection() {
           Powder coating, precision cutting, and sheet-metal bending — handled under one roof for faster turnaround, lower total cost, and consistent results.
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
             {
               title: "One Roof Workflow",
@@ -131,13 +131,13 @@ function TaglineSection() {
             <a
               key={i}
               href="#contact"
-              className="block bg-card/60 backdrop-blur-sm border border-card-border rounded-md p-5 hover-elevate transition-all group"
+              className="block bg-card/60 backdrop-blur-sm border border-card-border rounded-md p-5 hover-elevate transition-all group text-center"
               data-testid={`card-feature-${i}`}
             >
               <h4 className="font-heading text-sm font-semibold text-primary mb-2">{item.title}</h4>
               <p className="text-foreground/60 text-xs leading-relaxed mb-3">{item.desc}</p>
-              <span className="inline-flex items-center text-accent text-xs font-medium gap-1 transition-all">
-                Read more <ChevronRight className="w-3 h-3" />
+              <span className="inline-flex items-center justify-center text-foreground/60 text-xs font-medium gap-1 transition-all w-full">
+                &rarr;
               </span>
             </a>
           ))}
