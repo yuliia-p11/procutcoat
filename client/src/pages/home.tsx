@@ -152,7 +152,7 @@ function HeroSection() {
     <section className="relative py-20 lg:py-28" data-testid="section-hero">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-10">
+        <div className="max-w-3xl mb-10">
           <span className="inline-block text-primary text-xs font-medium tracking-widest uppercase mb-4" data-testid="text-hero-label">
             New Technology
           </span>
@@ -206,12 +206,12 @@ function WorkshopSection() {
   return (
     <section className="py-20 lg:py-28" data-testid="section-workshop">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-4">
+        <div className="mb-4">
           <span className="text-primary text-xs font-medium tracking-widest uppercase" data-testid="text-workshop-label">
             FULL-SERVICE ORLANDO SHOP FOR REAL WORK
           </span>
         </div>
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground text-center mb-12 lg:mb-16" data-testid="text-workshop-title">
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-12 lg:mb-16" data-testid="text-workshop-title">
           Built Tough for Real Workshops
         </h2>
 
@@ -284,7 +284,7 @@ function VideoSection() {
           ].map((item, i) => (
             <div
               key={i}
-              className="bg-card/60 backdrop-blur-sm border border-card-border rounded-md p-6 hover-elevate transition-all"
+              className="bg-card/60 backdrop-blur-sm border border-card-border rounded-md p-6 hover-elevate transition-all text-center"
               data-testid={`card-benefit-${i}`}
             >
               <h4 className="font-heading text-base font-semibold text-foreground mb-2">{item.title}</h4>
@@ -330,14 +330,14 @@ function HotspotSection() {
 function PerfectForSection() {
   return (
     <section className="py-20 lg:py-28 bg-card/30" data-testid="section-perfect">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span className="text-primary text-xs font-medium tracking-widest uppercase mb-4 block" data-testid="text-perfect-label">
           Perfect for..
         </span>
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-6 max-w-4xl mx-auto leading-tight" data-testid="text-perfect-title">
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-6 max-w-4xl leading-tight" data-testid="text-perfect-title">
           Perfect for shops, builders, studios — and ambitious makers.
         </h2>
-        <p className="text-foreground/70 text-base leading-relaxed max-w-2xl mx-auto mb-10" data-testid="text-perfect-description">
+        <p className="text-foreground/70 text-base leading-relaxed max-w-2xl mb-10" data-testid="text-perfect-description">
           Our integrated workflow helps you move faster and avoid coordination headaches. If you need dependable cutting, bending, and powder coating locally in Orlando, we'll make your next run smoother.
         </p>
         <a href="#contact">
@@ -439,14 +439,14 @@ function FAQSection() {
 function CTASection() {
   return (
     <section id="contact" className="py-20 lg:py-28 bg-card/30" data-testid="section-cta">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="text-cta-title">
           Ready to start a project?
         </h2>
         <p className="text-foreground/70 text-base leading-relaxed mb-8" data-testid="text-cta-description">
           Send your part details and timeline — we'll respond with next steps.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-sm text-foreground/60 mb-8">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-foreground/60 mb-8">
           <div className="flex items-center gap-2" data-testid="text-cta-address">
             <MapPin className="w-4 h-4 text-primary shrink-0" />
             <span><strong className="text-foreground">Address:</strong> 1345 Pine Ave, Orlando, FL 32824</span>
