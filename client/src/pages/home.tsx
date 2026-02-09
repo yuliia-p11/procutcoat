@@ -1,83 +1,8 @@
 import { useState } from "react";
-import { Menu, X, ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus, Calendar, CheckSquare, Route } from "lucide-react";
+import { ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus, Calendar, CheckSquare, Route } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-
-function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
-  return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
-          <a href="/" className="flex items-center gap-2" data-testid="link-logo">
-            <span className="font-heading text-xl sm:text-2xl font-bold text-foreground tracking-tight">
-              <span className="text-primary">Pro</span>Cut & Coat
-            </span>
-          </a>
-
-          <nav className="hidden md:flex items-center gap-8" data-testid="nav-desktop">
-            <a
-              href="#home"
-              className="text-sm font-medium text-foreground/80 transition-colors"
-              data-testid="link-home"
-            >
-              Home
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-foreground/80 transition-colors"
-              data-testid="link-contact"
-            >
-              Contact
-            </a>
-          </nav>
-
-          <Button
-            size="icon"
-            variant="ghost"
-            className="md:hidden"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            data-testid="button-hamburger"
-          >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </Button>
-        </div>
-      </div>
-
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border"
-            data-testid="nav-mobile"
-          >
-            <div className="px-4 py-4 flex flex-col gap-3">
-              <a
-                href="#home"
-                className="text-sm font-medium text-foreground/80 transition-colors py-2"
-                onClick={() => setMobileOpen(false)}
-                data-testid="link-home-mobile"
-              >
-                Home
-              </a>
-              <a
-                href="#contact"
-                className="text-sm font-medium text-foreground/80 transition-colors py-2"
-                onClick={() => setMobileOpen(false)}
-                data-testid="link-contact-mobile"
-              >
-                Contact
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
-  );
-}
+import { Header } from "@/components/header";
 
 function FullHeroSection() {
   return (
@@ -130,7 +55,7 @@ function TaglineSection() {
           ].map((item, i) => (
             <a
               key={i}
-              href="#contact"
+              href="/contact"
               className="block bg-card/60 backdrop-blur-sm border border-card-border rounded-md p-5 hover-elevate transition-all group text-center"
               data-testid={`card-feature-${i}`}
             >
@@ -163,7 +88,7 @@ function HeroSection() {
           <p className="text-foreground/70 text-lg leading-relaxed mb-8" data-testid="text-hero-description">
             ProCut & Coat streamlines production by combining powder coating, precision cutting, and sheet-metal bending in one Orlando location. That means fewer delays, fewer variables, and a smoother build from start to finish.
           </p>
-          <a href="#contact">
+          <a href="/contact">
             <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-hero-contact">
               Contact us
               <ChevronRight className="w-4 h-4 ml-1" />
@@ -240,7 +165,7 @@ function WorkshopSection() {
                 </li>
               ))}
             </ul>
-            <a href="#contact">
+            <a href="/contact">
               <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-workshop-contact">
                 Contact us
                 <ChevronRight className="w-4 h-4 ml-1" />
@@ -352,7 +277,7 @@ function PerfectForSection() {
             <p className="text-foreground/70 text-base leading-relaxed mb-10" data-testid="text-perfect-description">
               Our integrated workflow helps you move faster and avoid coordination headaches. If you need dependable cutting, bending, and powder coating locally in Orlando, we'll make your next run smoother.
             </p>
-            <a href="#contact">
+            <a href="/contact">
               <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-perfect-contacts">
                 Contacts
                 <ChevronRight className="w-4 h-4 ml-1" />
