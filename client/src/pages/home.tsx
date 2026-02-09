@@ -206,19 +206,20 @@ function WorkshopSection() {
   return (
     <section className="py-20 lg:py-28" data-testid="section-workshop">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-4">
-          <span className="text-primary text-xs font-medium tracking-widest uppercase" data-testid="text-workshop-label">
-            FULL-SERVICE ORLANDO SHOP FOR REAL WORK
-          </span>
-        </div>
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-12 lg:mb-16" data-testid="text-workshop-title">
-          Built Tough for Real Workshops
-        </h2>
-
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-          <div className="relative rounded-md overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center" data-testid="img-workshop-placeholder">
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            <span className="text-muted-foreground text-sm font-medium z-10">IMAGE_PLACEHOLDER_1</span>
+          <div>
+            <div className="mb-4">
+              <span className="text-primary text-xs font-medium tracking-widest uppercase" data-testid="text-workshop-label">
+                FULL-SERVICE ORLANDO SHOP FOR REAL WORK
+              </span>
+            </div>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-8 lg:mb-10" data-testid="text-workshop-title">
+              Built Tough for Real Workshops
+            </h2>
+            <div className="relative rounded-md overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center" data-testid="img-workshop-placeholder">
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+              <span className="text-muted-foreground text-sm font-medium z-10">IMAGE_PLACEHOLDER_1</span>
+            </div>
           </div>
 
           <div>
