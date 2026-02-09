@@ -53,7 +53,7 @@ function JotFormEmbed() {
 
   return (
     <section className="pb-20 lg:pb-28" data-testid="section-contact-form">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto px-1 sm:px-2">
         <div ref={containerRef} className="rounded-md overflow-hidden" data-testid="jotform-container" />
       </div>
     </section>
