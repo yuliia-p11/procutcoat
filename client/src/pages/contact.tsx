@@ -5,7 +5,7 @@ import { ArrowUp } from "lucide-react";
 function ContactHero() {
   return (
     <section className="pt-24 sm:pt-28 pb-12 lg:pb-16" data-testid="section-contact-hero">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4">
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-[57px] font-bold text-foreground leading-tight mb-4" data-testid="text-contact-title">
           Contact Us
         </h1>
@@ -53,7 +53,7 @@ function JotFormEmbed() {
 
   return (
     <section className="pb-20 lg:pb-28" data-testid="section-contact-form">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto px-2 sm:px-3 lg:px-4">
         <div ref={containerRef} className="rounded-md overflow-hidden" data-testid="jotform-container" />
       </div>
     </section>
@@ -63,7 +63,7 @@ function JotFormEmbed() {
 function Footer() {
   return (
     <footer className="py-8 border-t border-border" data-testid="section-footer">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 flex flex-wrap items-center justify-between gap-4">
         <span className="font-heading text-sm font-semibold text-foreground/50">
           <span className="text-primary">Pro</span>Cut & Coat
         </span>
