@@ -411,7 +411,7 @@ function CTASection() {
             <span><strong className="text-foreground">Email:</strong> info@procutcoat.com</span>
           </div>
         </div>
-        <a href="mailto:info@procutcoat.com">
+        <a href="/contact">
           <Button className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-lets-talk">
             Let's Talk!
             <ChevronRight className="w-4 h-4 ml-1" />
