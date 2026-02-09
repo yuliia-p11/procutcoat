@@ -353,25 +353,41 @@ function PerfectForSection() {
               Our integrated workflow helps you move faster and avoid coordination headaches. If you need dependable cutting, bending, and powder coating locally in Orlando, we'll make your next run smoother.
             </p>
             <a href="#contact">
-              <Button className="bg-primary text-primary-foreground border border-primary-border mb-16" data-testid="button-perfect-contacts">
+              <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-perfect-contacts">
                 Contacts
                 <ChevronRight className="w-4 h-4 ml-1" />
               </Button>
             </a>
-
-            <div className="grid grid-cols-3 gap-6">
-              {[
-                { value: "50K", label: "Parts coated with Pecica" },
-                { value: "80%", label: "Average reduction in turnaround time" },
-                { value: "50K", label: "Annual savings for typical customer" },
-              ].map((stat, i) => (
-                <div key={i} className="text-center" data-testid={`stat-${i}`}>
-                  <span className="font-heading text-3xl sm:text-4xl font-bold text-primary">{stat.value}</span>
-                  <p className="text-foreground/60 text-xs sm:text-sm mt-2">{stat.label}</p>
-                </div>
-              ))}
-            </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function StatsSection() {
+  return (
+    <section className="py-20 lg:py-28" data-testid="section-stats">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { value: "50K", label: "Parts coated with Pecica" },
+            { value: "80%", label: "Average reduction in turnaround time" },
+            { value: "50K", label: "Annual savings for typical customer" },
+          ].map((stat, i) => (
+            <div
+              key={i}
+              className="relative flex items-center justify-center py-12 sm:py-16"
+              data-testid={`stat-${i}`}
+            >
+              <span className="absolute inset-0 flex items-center justify-center font-heading font-bold text-foreground/[0.07] text-[96px] sm:text-[120px] lg:text-[144px] select-none leading-none">
+                {stat.value}
+              </span>
+              <p className="relative z-10 text-foreground/80 text-sm sm:text-base font-medium text-center max-w-[200px]">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -513,6 +529,7 @@ export default function Home() {
       <VideoSection />
       <HotspotSection />
       <PerfectForSection />
+      <StatsSection />
       <FAQSection />
       <CTASection />
       <Footer />
