@@ -331,33 +331,42 @@ function PerfectForSection() {
   return (
     <section className="py-20 lg:py-28 bg-card/30" data-testid="section-perfect">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <span className="text-primary text-xs font-medium tracking-widest uppercase mb-4 block" data-testid="text-perfect-label">
-          Perfect for..
-        </span>
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-6 max-w-4xl leading-tight" data-testid="text-perfect-title">
-          Perfect for shops, builders, studios — and ambitious makers.
-        </h2>
-        <p className="text-foreground/70 text-base leading-relaxed max-w-2xl mb-10" data-testid="text-perfect-description">
-          Our integrated workflow helps you move faster and avoid coordination headaches. If you need dependable cutting, bending, and powder coating locally in Orlando, we'll make your next run smoother.
-        </p>
-        <a href="#contact">
-          <Button className="bg-primary text-primary-foreground border border-primary-border mb-16" data-testid="button-perfect-contacts">
-            Contacts
-            <ChevronRight className="w-4 h-4 ml-1" />
-          </Button>
-        </a>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div className="relative rounded-md overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center" data-testid="img-perfect-placeholder">
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+            <span className="text-muted-foreground text-sm font-medium z-10">IMAGE_PLACEHOLDER_2</span>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
-          {[
-            { value: "50K", label: "Parts coated with Pecica" },
-            { value: "80%", label: "Average reduction in turnaround time" },
-            { value: "50K", label: "Annual savings for typical customer" },
-          ].map((stat, i) => (
-            <div key={i} className="text-center" data-testid={`stat-${i}`}>
-              <span className="font-heading text-4xl sm:text-5xl font-bold text-primary">{stat.value}</span>
-              <p className="text-foreground/60 text-sm mt-2">{stat.label}</p>
+          <div>
+            <span className="text-primary text-xs font-medium tracking-widest uppercase mb-4 block" data-testid="text-perfect-label">
+              Perfect for..
+            </span>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-6 leading-tight" data-testid="text-perfect-title">
+              Perfect for shops, builders, studios — and ambitious makers.
+            </h2>
+            <p className="text-foreground/70 text-base leading-relaxed mb-10" data-testid="text-perfect-description">
+              Our integrated workflow helps you move faster and avoid coordination headaches. If you need dependable cutting, bending, and powder coating locally in Orlando, we'll make your next run smoother.
+            </p>
+            <a href="#contact">
+              <Button className="bg-primary text-primary-foreground border border-primary-border mb-16" data-testid="button-perfect-contacts">
+                Contacts
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </a>
+
+            <div className="grid grid-cols-3 gap-6">
+              {[
+                { value: "50K", label: "Parts coated with Pecica" },
+                { value: "80%", label: "Average reduction in turnaround time" },
+                { value: "50K", label: "Annual savings for typical customer" },
+              ].map((stat, i) => (
+                <div key={i} className="text-center" data-testid={`stat-${i}`}>
+                  <span className="font-heading text-3xl sm:text-4xl font-bold text-primary">{stat.value}</span>
+                  <p className="text-foreground/60 text-xs sm:text-sm mt-2">{stat.label}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>
