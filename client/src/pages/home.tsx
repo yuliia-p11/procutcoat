@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus } from "lucide-react";
+import { Menu, X, ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus, Calendar, CheckSquare, Route } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -273,14 +273,17 @@ function VideoSection() {
             {
               title: "Fast Scheduling",
               desc: "Simple intake, quick confirmation, reliable timelines.",
+              icon: Calendar,
             },
             {
               title: "Quality Control",
               desc: "Fewer handoffs and tighter checks throughout the workflow.",
+              icon: CheckSquare,
             },
             {
               title: "Durable Finishes",
               desc: "Powder-coated results built to last and look professional.",
+              icon: Route,
             },
           ].map((item, i) => (
             <div
@@ -288,6 +291,7 @@ function VideoSection() {
               className="bg-card/60 backdrop-blur-sm border border-card-border rounded-md p-6 hover-elevate transition-all text-center"
               data-testid={`card-benefit-${i}`}
             >
+              <item.icon className="w-6 h-6 text-primary mx-auto mb-3" />
               <h4 className="font-heading text-base font-semibold text-foreground mb-2">{item.title}</h4>
               <p className="text-foreground/60 text-sm leading-relaxed">{item.desc}</p>
             </div>
