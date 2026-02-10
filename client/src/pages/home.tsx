@@ -49,9 +49,24 @@ function FullHeroSection() {
   const ref = useScrollReveal<HTMLElement>({ threshold: 0.05 });
 
   return (
-    <section ref={ref} id="home" className="relative h-screen w-full flex items-end" data-testid="section-full-hero">
-      <div className="absolute inset-0 bg-muted flex items-center justify-center">
-        <span className="text-muted-foreground text-sm font-medium z-10">VIDEO_PLACEHOLDER_2</span>
+    <section
+      ref={ref}
+      id="home"
+      className="relative w-full flex items-end min-h-[60vh] md:h-screen"
+      data-testid="section-full-hero"
+    >
+      <div className="absolute inset-0 bg-muted overflow-hidden">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster="/videos/hero-poster.jpg"
+          data-testid="video-hero"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
