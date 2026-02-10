@@ -3,26 +3,44 @@ import { ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus, Calendar, Check
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/header";
-import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import imagePlaceholder2 from "@assets/Image_placeholder_2_1770751942833.jpg";
 
-function LaserAccent() {
+function LaserLine({ direction = "ltr", duration = 5, delay = 0, className = "" }: {
+  direction?: "ltr" | "rtl";
+  duration?: number;
+  delay?: number;
+  className?: string;
+}) {
+  const animName = direction === "ltr" ? "laser-trace" : "laser-trace-reverse";
   return (
-    <div className="laser-accent absolute bottom-0 left-0 right-0 h-px overflow-hidden pointer-events-none">
+    <div className={`laser-line absolute left-0 right-0 h-px ${className}`}>
       <div
         className="absolute inset-0 h-full"
         style={{
-          background: "linear-gradient(90deg, transparent, hsl(var(--primary)), transparent)",
-          animation: "laser-trace 4s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+          background: "linear-gradient(90deg, transparent 0%, hsl(var(--primary) / 0.6) 40%, hsl(var(--primary)) 50%, hsl(var(--primary) / 0.6) 60%, transparent 100%)",
+          animation: `${animName} ${duration}s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s infinite`,
         }}
       />
       <div
-        className="absolute inset-0 h-[2px] -top-[0.5px] blur-sm"
+        className="absolute inset-0 h-[3px] -top-px blur-sm"
         style={{
-          background: "linear-gradient(90deg, transparent, hsl(var(--primary) / 0.5), transparent)",
-          animation: "laser-trace 4s cubic-bezier(0.4, 0, 0.2, 1) infinite",
+          background: "linear-gradient(90deg, transparent 0%, hsl(var(--primary) / 0.3) 40%, hsl(var(--primary) / 0.5) 50%, hsl(var(--primary) / 0.3) 60%, transparent 100%)",
+          animation: `${animName} ${duration}s cubic-bezier(0.4, 0, 0.2, 1) ${delay}s infinite`,
         }}
       />
+    </div>
+  );
+}
+
+function ScrollLaserLine({ direction = "ltr", className = "" }: {
+  direction?: "ltr" | "rtl";
+  className?: string;
+}) {
+  const ref = useLaserReveal<HTMLDivElement>();
+  return (
+    <div ref={ref} className={`relative h-px ${className}`}>
+      <LaserLine direction={direction} duration={6} />
     </div>
   );
 }
@@ -37,10 +55,10 @@ function FullHeroSection() {
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
-        <h1 data-reveal="up" data-reveal-delay="1" className="font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight max-w-3xl mb-6" data-testid="text-full-hero-title">
+        <h1 className="section-child section-child-1 font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight max-w-3xl mb-6" data-testid="text-full-hero-title">
           Full-Service Metal Fabrication & Finishing in Orlando, FL
         </h1>
-        <div data-reveal="up" data-reveal-delay="2">
+        <div className="section-child section-child-2">
           <a href="#tagline">
             <Button className="bg-primary text-white border border-primary-border" data-testid="button-learn-more">
               Learn more
@@ -49,22 +67,22 @@ function FullHeroSection() {
           </a>
         </div>
       </div>
-      <LaserAccent />
+      <LaserLine direction="ltr" duration={5} className="bottom-0 z-20" />
     </section>
   );
 }
 
 function TaglineSection() {
-  const ref = useScrollReveal<HTMLElement>();
+  const ref = useScrollReveal<HTMLElement>({ exitFade: true });
 
   return (
     <section ref={ref} id="tagline" className="relative pt-24 sm:pt-28 pb-16 lg:pb-20" data-testid="section-tagline">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 data-reveal="up" data-reveal-delay="1" className="font-heading text-xl sm:text-2xl lg:text-3xl font-medium text-foreground/80 leading-relaxed max-w-4xl mb-12 lg:mb-16" data-testid="text-tagline">
+        <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-medium text-foreground/80 leading-relaxed max-w-4xl mb-12 lg:mb-16" data-testid="text-tagline">
           Powder coating, precision cutting, and sheet-metal bending — handled under one roof for faster turnaround, lower total cost, and consistent results.
         </h3>
 
-        <div data-reveal="up" data-reveal-delay="2" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
             {
               title: "One Roof Workflow",
@@ -103,24 +121,24 @@ function TaglineSection() {
 }
 
 function HeroSection() {
-  const ref = useScrollReveal<HTMLElement>();
+  const ref = useScrollReveal<HTMLElement>({ exitFade: true });
 
   return (
     <section ref={ref} className="relative py-20 lg:py-28" data-testid="section-hero">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-10">
-          <span data-reveal="up" data-reveal-delay="1" className="inline-block text-primary text-xs font-medium tracking-widest uppercase mb-4" data-testid="text-hero-label">
+          <span className="section-child section-child-1 inline-block text-primary text-xs font-medium tracking-widest uppercase mb-4" data-testid="text-hero-label">
             New Technology
           </span>
-          <h1 data-reveal="up" data-reveal-delay="2" className="font-heading text-4xl sm:text-5xl lg:text-[57px] font-bold text-foreground leading-tight mb-6" data-testid="text-hero-title">
+          <h1 className="section-child section-child-2 font-heading text-4xl sm:text-5xl lg:text-[57px] font-bold text-foreground leading-tight mb-6" data-testid="text-hero-title">
             From Raw Metal to Finished Product{" "}
             <span className="text-primary">In One Facility</span>
           </h1>
-          <p data-reveal="up" data-reveal-delay="3" className="text-foreground/70 text-lg leading-relaxed mb-8" data-testid="text-hero-description">
+          <p className="section-child section-child-3 text-foreground/70 text-lg leading-relaxed mb-8" data-testid="text-hero-description">
             ProCut & Coat streamlines production by combining powder coating, precision cutting, and sheet-metal bending in one Orlando location. That means fewer delays, fewer variables, and a smoother build from start to finish.
           </p>
-          <div data-reveal="up" data-reveal-delay="4">
+          <div className="section-child section-child-3">
             <a href="/contact">
               <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-hero-contact">
                 Contact us
@@ -130,18 +148,19 @@ function HeroSection() {
           </div>
         </div>
       </div>
+      <ScrollLaserLine direction="rtl" className="absolute bottom-0 left-0 right-0 z-10" />
     </section>
   );
 }
 
 function WhySection() {
-  const ref = useScrollReveal<HTMLElement>();
+  const ref = useScrollReveal<HTMLElement>({ exitFade: true });
 
   return (
     <section ref={ref} className="py-20 lg:py-28 bg-card/30" data-testid="section-why">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-          <div data-reveal="up" data-reveal-delay="1">
+          <div>
             <h4 className="font-heading text-lg font-semibold text-accent mb-4" data-testid="text-why-title">
               Why ProCut & Coat
             </h4>
@@ -149,7 +168,7 @@ function WhySection() {
               We've spent years delivering for long-term industrial partners. Now we're bringing that same standard of planning, communication, and quality control to businesses and independent makers.
             </p>
           </div>
-          <div data-reveal="up" data-reveal-delay="2">
+          <div>
             <h4 className="font-heading text-lg font-semibold text-accent mb-4" data-testid="text-delivery-title">
               Designed for predictable delivery
             </h4>
@@ -164,33 +183,33 @@ function WhySection() {
 }
 
 function WorkshopSection() {
-  const ref = useScrollReveal<HTMLElement>();
+  const ref = useScrollReveal<HTMLElement>({ exitFade: true });
 
   return (
-    <section ref={ref} className="py-20 lg:py-28" data-testid="section-workshop">
+    <section ref={ref} className="relative py-20 lg:py-28" data-testid="section-workshop">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div>
-            <div className="mb-4" data-reveal="up" data-reveal-delay="1">
+            <div className="mb-4">
               <span className="text-primary text-xs font-medium tracking-widest uppercase" data-testid="text-workshop-label">
                 FULL-SERVICE ORLANDO SHOP FOR REAL WORK
               </span>
             </div>
-            <h2 data-reveal="up" data-reveal-delay="2" className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-8 lg:mb-10" data-testid="text-workshop-title">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-8 lg:mb-10" data-testid="text-workshop-title">
               Built Tough for Real Workshops
             </h2>
-            <div data-reveal="fade" data-reveal-delay="3" className="relative rounded-md overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center" data-testid="img-workshop-placeholder">
+            <div className="relative rounded-md overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center" data-testid="img-workshop-placeholder">
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
               <span className="text-muted-foreground text-sm font-medium z-10">IMAGE_PLACEHOLDER_1</span>
             </div>
           </div>
 
           <div>
-            <p data-reveal="up" data-reveal-delay="2" className="text-foreground/70 text-base leading-relaxed mb-6" data-testid="text-workshop-description">
+            <p className="text-foreground/70 text-base leading-relaxed mb-6" data-testid="text-workshop-description">
               We support prototypes, custom builds, and small-batch manufacturing with dependable processes and durable finishes. Whether you're a fabrication shop, contractor, studio, or maker — you'll get consistent results and a timeline you can plan around.
             </p>
-            <p data-reveal="up" data-reveal-delay="3" className="text-foreground font-semibold mb-4">What we're set up for</p>
-            <ul data-reveal="up" data-reveal-delay="3" className="space-y-2 mb-8">
+            <p className="text-foreground font-semibold mb-4">What we're set up for</p>
+            <ul className="space-y-2 mb-8">
               {[
                 "Prototypes and custom one-offs",
                 "Small batches and repeat jobs",
@@ -203,28 +222,27 @@ function WorkshopSection() {
                 </li>
               ))}
             </ul>
-            <div data-reveal="up" data-reveal-delay="4">
-              <a href="/contact">
-                <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-workshop-contact">
-                  Contact us
-                  <ChevronRight className="w-4 h-4 ml-1" />
-                </Button>
-              </a>
-            </div>
+            <a href="/contact">
+              <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-workshop-contact">
+                Contact us
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
+      <ScrollLaserLine direction="ltr" className="absolute bottom-0 left-0 right-0 z-10" />
     </section>
   );
 }
 
 function VideoSection() {
-  const ref = useScrollReveal<HTMLElement>();
+  const ref = useScrollReveal<HTMLElement>({ exitFade: true });
 
   return (
     <section ref={ref} className="py-20 lg:py-28 bg-card/30" data-testid="section-video">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div data-reveal="fade" data-reveal-delay="1" className="relative rounded-md overflow-hidden aspect-video bg-muted flex items-center justify-center mb-16" data-testid="video-placeholder">
+        <div className="relative rounded-md overflow-hidden aspect-video bg-muted flex items-center justify-center mb-16" data-testid="video-placeholder">
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/20" />
           <button
             className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary/90 flex items-center justify-center transition-all"
@@ -255,8 +273,6 @@ function VideoSection() {
           ].map((item, i) => (
             <div
               key={i}
-              data-reveal="up"
-              data-reveal-delay={`${i + 2}`}
               className="bg-card/60 backdrop-blur-sm border border-card-border rounded-md p-6 hover-elevate transition-all text-center"
               data-testid={`card-benefit-${i}`}
             >
@@ -277,7 +293,7 @@ function HotspotSection() {
   return (
     <section ref={ref} className="py-20 lg:py-28" data-testid="section-hotspot">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div data-reveal="fade" data-reveal-delay="1" className="relative rounded-md overflow-hidden aspect-[16/9] bg-muted flex items-center justify-center" data-testid="img-hotspot-placeholder">
+        <div className="relative rounded-md overflow-hidden aspect-[16/9] bg-muted flex items-center justify-center" data-testid="img-hotspot-placeholder">
           <img src={imagePlaceholder2} alt="Pecica equipment hotspot" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
 
@@ -304,33 +320,32 @@ function HotspotSection() {
 }
 
 function PerfectForSection() {
-  const ref = useScrollReveal<HTMLElement>();
+  const ref = useScrollReveal<HTMLElement>({ exitFade: true });
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-card/30" data-testid="section-perfect">
+    <section ref={ref} className="relative py-20 lg:py-28 bg-card/30" data-testid="section-perfect">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <div>
-            <span data-reveal="up" data-reveal-delay="1" className="text-primary text-xs font-medium tracking-widest uppercase mb-4 block" data-testid="text-perfect-label">
+            <span className="text-primary text-xs font-medium tracking-widest uppercase mb-4 block" data-testid="text-perfect-label">
               Perfect for..
             </span>
-            <h2 data-reveal="up" data-reveal-delay="2" className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-6 leading-tight" data-testid="text-perfect-title">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-6 leading-tight" data-testid="text-perfect-title">
               Perfect for shops, builders, studios — and ambitious makers.
             </h2>
-            <p data-reveal="up" data-reveal-delay="3" className="text-foreground/70 text-base leading-relaxed mb-10" data-testid="text-perfect-description">
+            <p className="text-foreground/70 text-base leading-relaxed mb-10" data-testid="text-perfect-description">
               Our integrated workflow helps you move faster and avoid coordination headaches. If you need dependable cutting, bending, and powder coating locally in Orlando, we'll make your next run smoother.
             </p>
-            <div data-reveal="up" data-reveal-delay="4">
-              <a href="/contact">
-                <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-perfect-contacts">
-                  Contacts
-                  <ChevronRight className="w-4 h-4 ml-1" />
-                </Button>
-              </a>
-            </div>
+            <a href="/contact">
+              <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-perfect-contacts">
+                Contacts
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
+      <ScrollLaserLine direction="rtl" className="absolute bottom-0 left-0 right-0 z-10" />
     </section>
   );
 }
@@ -339,7 +354,7 @@ function StatsSection() {
   const ref = useScrollReveal<HTMLElement>();
 
   return (
-    <section ref={ref} className="py-20 lg:py-28" data-testid="section-stats">
+    <section ref={ref} className="relative py-20 lg:py-28" data-testid="section-stats">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -349,8 +364,6 @@ function StatsSection() {
           ].map((stat, i) => (
             <div
               key={i}
-              data-reveal="up"
-              data-reveal-delay={`${i + 1}`}
               className="relative flex items-center justify-center py-12 sm:py-16"
               data-testid={`stat-${i}`}
             >
@@ -364,6 +377,7 @@ function StatsSection() {
           ))}
         </div>
       </div>
+      <LaserLine direction="ltr" duration={7} delay={1} className="bottom-0" />
     </section>
   );
 }
@@ -402,10 +416,10 @@ function FAQSection() {
   return (
     <section ref={ref} className="py-20 lg:py-28" data-testid="section-faq">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 data-reveal="up" data-reveal-delay="1" className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-10" data-testid="text-faq-title">
+        <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-10" data-testid="text-faq-title">
           FAQ
         </h2>
-        <div data-reveal="up" data-reveal-delay="2" className="space-y-0">
+        <div className="space-y-0">
           {faqs.map((faq, i) => (
             <div key={i} className="border-b border-border" data-testid={`faq-item-${i}`}>
               <button
@@ -424,7 +438,7 @@ function FAQSection() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
+                    transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                     className="overflow-hidden"
                   >
                     <p className="text-foreground/60 text-sm leading-relaxed pb-5" data-testid={`text-faq-answer-${i}`}>
@@ -447,13 +461,13 @@ function CTASection() {
   return (
     <section ref={ref} id="contact" className="py-20 lg:py-28 bg-card/30" data-testid="section-cta">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 data-reveal="up" data-reveal-delay="1" className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="text-cta-title">
+        <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="text-cta-title">
           Ready to start a project?
         </h2>
-        <p data-reveal="up" data-reveal-delay="2" className="text-foreground/70 text-base leading-relaxed mb-8" data-testid="text-cta-description">
+        <p className="text-foreground/70 text-base leading-relaxed mb-8" data-testid="text-cta-description">
           Send your part details and timeline — we'll respond with next steps.
         </p>
-        <div data-reveal="up" data-reveal-delay="3" className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-foreground/60 mb-8">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-foreground/60 mb-8">
           <div className="flex items-center gap-2" data-testid="text-cta-address">
             <MapPin className="w-4 h-4 text-primary shrink-0" />
             <span><strong className="text-foreground">Address:</strong> 1345 Pine Ave, Orlando, FL 32824</span>
@@ -463,14 +477,12 @@ function CTASection() {
             <span><strong className="text-foreground">Email:</strong> info@procutcoat.com</span>
           </div>
         </div>
-        <div data-reveal="up" data-reveal-delay="4">
-          <a href="/contact">
-            <Button className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-lets-talk">
-              Let's Talk!
-              <ChevronRight className="w-4 h-4 ml-1" />
-            </Button>
-          </a>
-        </div>
+        <a href="/contact">
+          <Button className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-lets-talk">
+            Let's Talk!
+            <ChevronRight className="w-4 h-4 ml-1" />
+          </Button>
+        </a>
       </div>
     </section>
   );

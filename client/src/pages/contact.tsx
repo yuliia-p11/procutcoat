@@ -9,10 +9,10 @@ function ContactHero() {
   return (
     <section ref={ref} className="pt-24 sm:pt-28 pb-12 lg:pb-16" data-testid="section-contact-hero">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 data-reveal="up" data-reveal-delay="1" className="font-heading text-4xl sm:text-5xl lg:text-[57px] font-bold text-foreground leading-tight mb-4" data-testid="text-contact-title">
+        <h1 className="section-child section-child-1 font-heading text-4xl sm:text-5xl lg:text-[57px] font-bold text-foreground leading-tight mb-4" data-testid="text-contact-title">
           Contact Us
         </h1>
-        <p data-reveal="up" data-reveal-delay="2" className="text-foreground/70 text-lg leading-relaxed max-w-2xl" data-testid="text-contact-subtitle">
+        <p className="section-child section-child-2 text-foreground/70 text-lg leading-relaxed max-w-2xl" data-testid="text-contact-subtitle">
           Have a project in mind? Fill out the form below and our team will get back to you with next steps, pricing, and timelines.
         </p>
       </div>
@@ -58,7 +58,7 @@ function JotFormEmbed() {
   return (
     <section ref={sectionRef} className="pb-20 lg:pb-28" data-testid="section-contact-form">
       <div className="max-w-3xl mx-auto px-1 sm:px-2">
-        <div data-reveal="fade" data-reveal-delay="1" ref={containerRef} className="rounded-md overflow-hidden" data-testid="jotform-container" />
+        <div ref={containerRef} className="rounded-md overflow-hidden" data-testid="jotform-container" />
       </div>
     </section>
   );

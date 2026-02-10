@@ -180,76 +180,122 @@
   }
 }
 
-@keyframes reveal-up {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes reveal-fade {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 @keyframes laser-trace {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-110%);
     opacity: 0;
   }
-  10% {
+  8% {
     opacity: 1;
   }
-  90% {
+  92% {
     opacity: 1;
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(110%);
+    opacity: 0;
+  }
+}
+
+@keyframes laser-trace-reverse {
+  0% {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-110%);
     opacity: 0;
   }
 }
 
 @keyframes laser-glow-pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.6; }
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.5; }
 }
 
-.reveal-hidden {
+.section-reveal {
   opacity: 0;
+  transform: translateY(6px);
+  transition:
+    opacity 0.9s cubic-bezier(0.25, 0.1, 0.25, 1),
+    transform 0.9s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: opacity, transform;
 }
 
-.reveal-visible {
-  animation: reveal-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.section-reveal.section-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.reveal-visible-fade {
-  animation: reveal-fade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+.section-reveal.section-exiting {
+  opacity: 0.4;
+  transform: translateY(-3px);
+  transition:
+    opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1),
+    transform 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.reveal-delay-1 { animation-delay: 80ms; }
-.reveal-delay-2 { animation-delay: 160ms; }
-.reveal-delay-3 { animation-delay: 240ms; }
-.reveal-delay-4 { animation-delay: 320ms; }
-.reveal-delay-5 { animation-delay: 400ms; }
+.section-reveal .section-child {
+  opacity: 0;
+  transform: translateY(5px);
+  transition:
+    opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+    transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.section-reveal.section-visible .section-child {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-reveal.section-visible .section-child-1 { transition-delay: 120ms; }
+.section-reveal.section-visible .section-child-2 { transition-delay: 240ms; }
+.section-reveal.section-visible .section-child-3 { transition-delay: 360ms; }
+
+.laser-line {
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.laser-line-hidden {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.laser-line-visible {
+  opacity: 1;
+  transition: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .reveal-hidden {
+  .section-reveal {
     opacity: 1;
+    transform: none;
+    transition: none;
   }
-  .reveal-visible,
-  .reveal-visible-fade {
-    animation: none;
+  .section-reveal .section-child {
     opacity: 1;
+    transform: none;
+    transition: none;
   }
-  .laser-accent * {
+  .section-reveal.section-exiting {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .laser-line,
+  .laser-line * {
     animation: none !important;
+    opacity: 0 !important;
   }
 }
 
