@@ -3,6 +3,7 @@ import { ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus, Calendar, Check
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/header";
+import imagePlaceholder2 from "@assets/Image_placeholder_2_1770751942833.jpg";
 
 function FullHeroSection() {
   return (
@@ -232,8 +233,8 @@ function HotspotSection() {
     <section className="py-20 lg:py-28" data-testid="section-hotspot">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-md overflow-hidden aspect-[16/9] bg-muted flex items-center justify-center" data-testid="img-hotspot-placeholder">
+          <img src={imagePlaceholder2} alt="Pecica equipment hotspot" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-          <span className="text-muted-foreground text-sm font-medium z-10">IMAGE_PLACEHOLDER_2</span>
 
           {[
             { top: "25%", left: "20%" },
@@ -261,12 +262,7 @@ function PerfectForSection() {
   return (
     <section className="py-20 lg:py-28 bg-card/30" data-testid="section-perfect">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-          <div className="relative rounded-md overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center" data-testid="img-perfect-placeholder">
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-            <span className="text-muted-foreground text-sm font-medium z-10">IMAGE_PLACEHOLDER_2</span>
-          </div>
-
+        <div className="max-w-3xl">
           <div>
             <span className="text-primary text-xs font-medium tracking-widest uppercase mb-4 block" data-testid="text-perfect-label">
               Perfect for..
