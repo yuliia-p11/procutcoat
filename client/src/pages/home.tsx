@@ -194,19 +194,6 @@ function WhySection() {
   return (
     <section ref={ref} className="py-20 lg:py-28 bg-card/30" data-testid="section-why">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative lg:hidden mb-10 -mx-4 sm:-mx-6">
-          <div className="relative h-48 overflow-hidden">
-            <img
-              src={whyPowderCoatImage}
-              alt="Powder coating metal profiles"
-              className="w-full h-full object-cover"
-              data-testid="img-why-powder-mobile"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/30 to-transparent" />
-          </div>
-          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-card/30 to-transparent" />
-        </div>
-
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="hidden lg:block">
             <img
@@ -232,6 +219,17 @@ function WhySection() {
               <p className="text-foreground/70 text-base leading-relaxed" data-testid="text-delivery-description">
                 Clear scheduling, quick feedback, and one accountable team — so your project moves forward without surprises.
               </p>
+            </div>
+            <div className="lg:hidden -mx-4 sm:-mx-6">
+              <div className="relative overflow-hidden rounded-md mx-4 sm:mx-6">
+                <img
+                  src={whyPowderCoatImage}
+                  alt="Powder coating metal profiles"
+                  className="w-full h-48 object-cover"
+                  data-testid="img-why-powder-mobile"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card/60 via-transparent to-transparent" />
+              </div>
             </div>
           </div>
         </div>
