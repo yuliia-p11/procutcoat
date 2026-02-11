@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/header";
 import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import imagePlaceholder2 from "@assets/Image_placeholder_2_1770751942833.jpg";
+import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jpeg";
 
 function LaserLine({ direction = "ltr", duration = 5, delay = 0, className = "" }: {
   direction?: "ltr" | "rtl";
@@ -142,24 +143,42 @@ function HeroSection() {
     <section ref={ref} className="relative py-20 lg:py-28" data-testid="section-hero">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-10">
-          <span className="section-child section-child-1 inline-block text-primary text-xs font-medium tracking-widest uppercase mb-4" data-testid="text-hero-label">
-            New Technology
-          </span>
-          <h1 className="section-child section-child-2 font-heading text-4xl sm:text-5xl lg:text-[57px] font-bold text-foreground leading-tight mb-6" data-testid="text-hero-title">
-            From Raw Metal to Finished Product{" "}
-            <span className="text-primary">In One Facility</span>
-          </h1>
-          <p className="section-child section-child-3 text-foreground/70 text-lg leading-relaxed mb-8" data-testid="text-hero-description">
-            ProCut & Coat streamlines production by combining powder coating, precision cutting, and sheet-metal bending in one Orlando location. That means fewer delays, fewer variables, and a smoother build from start to finish.
-          </p>
-          <div className="section-child section-child-3">
-            <a href="/contact">
-              <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-hero-contact">
-                Contact us
-                <ChevronRight className="w-4 h-4 ml-1" />
-              </Button>
-            </a>
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div>
+            <span className="section-child section-child-1 inline-block text-primary text-xs font-medium tracking-widest uppercase mb-4" data-testid="text-hero-label">
+              New Technology
+            </span>
+            <h1 className="section-child section-child-2 font-heading text-4xl sm:text-5xl lg:text-[57px] font-bold text-foreground leading-tight mb-6" data-testid="text-hero-title">
+              From Raw Metal to Finished Product{" "}
+              <span className="text-primary">In One Facility</span>
+            </h1>
+            <p className="section-child section-child-3 text-foreground/70 text-lg leading-relaxed mb-8" data-testid="text-hero-description">
+              ProCut & Coat streamlines production by combining powder coating, precision cutting, and sheet-metal bending in one Orlando location. That means fewer delays, fewer variables, and a smoother build from start to finish.
+            </p>
+            <div className="section-child section-child-3 mb-8 lg:mb-0">
+              <a href="/contact">
+                <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-hero-contact">
+                  Contact us
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </Button>
+              </a>
+            </div>
+            <div className="section-child section-child-4 lg:hidden mt-8">
+              <img
+                src={heroMetalImage}
+                alt="Precision laser cutting metal with sparks"
+                className="w-full h-auto rounded-md object-cover"
+                data-testid="img-hero-metal-mobile"
+              />
+            </div>
+          </div>
+          <div className="hidden lg:block section-child section-child-4">
+            <img
+              src={heroMetalImage}
+              alt="Precision laser cutting metal with sparks"
+              className="w-full h-auto rounded-md object-cover"
+              data-testid="img-hero-metal"
+            />
           </div>
         </div>
       </div>
