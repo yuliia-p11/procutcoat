@@ -417,9 +417,8 @@ function StatsSection() {
   return (
     <section ref={ref} className="relative py-20 lg:py-28" data-testid="section-stats">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {[
-            { value: "50K", label: "Parts coated with Pecica" },
             { value: "80%", label: "Average reduction in turnaround time" },
             { value: "50K", label: "Annual savings for typical customer" },
           ].map((stat, i) => (
