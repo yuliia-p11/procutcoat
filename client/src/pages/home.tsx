@@ -52,20 +52,30 @@ function FullHeroSection() {
   const ref = useScrollReveal<HTMLElement>({ threshold: 0.05 });
   const videoRef = useCallback((node: HTMLVideoElement | null) => {
     if (!node) return;
+    node.defaultMuted = true;
     node.muted = true;
-    node.play().catch(() => {});
-    const onVisible = () => {
-      if (!document.hidden) {
-        node.muted = true;
-        node.play().catch(() => {});
-      }
-    };
-    const onLoaded = () => {
+    node.setAttribute("muted", "");
+    node.setAttribute("playsinline", "");
+    node.setAttribute("webkit-playsinline", "");
+    const tryPlay = () => {
       node.muted = true;
-      node.play().catch(() => {});
+      const p = node.play();
+      if (p) p.catch(() => {});
     };
-    document.addEventListener("visibilitychange", onVisible);
-    node.addEventListener("loadeddata", onLoaded);
+    tryPlay();
+    node.addEventListener("loadedmetadata", tryPlay);
+    node.addEventListener("canplay", tryPlay);
+    node.addEventListener("loadeddata", tryPlay);
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) tryPlay();
+    });
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) tryPlay();
+      },
+      { threshold: 0.1 }
+    );
+    io.observe(node);
   }, []);
 
   return (
@@ -83,6 +93,7 @@ function FullHeroSection() {
           loop
           muted
           playsInline
+          preload="auto"
           poster="/videos/hero-poster.jpg"
           data-testid="video-hero"
         >
