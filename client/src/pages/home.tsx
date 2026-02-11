@@ -6,6 +6,7 @@ import { Header } from "@/components/header";
 import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import imagePlaceholder2 from "@assets/Image_placeholder_2_1770751942833.jpg";
 import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jpeg";
+import whyPowderCoatImage from "@assets/AdobeStock_1740866468_Large_1770847990943.jpeg";
 
 function LaserLine({ direction = "ltr", duration = 5, delay = 0, className = "" }: {
   direction?: "ltr" | "rtl";
@@ -193,22 +194,45 @@ function WhySection() {
   return (
     <section ref={ref} className="py-20 lg:py-28 bg-card/30" data-testid="section-why">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-          <div>
-            <h4 className="font-heading text-lg font-semibold text-accent mb-4" data-testid="text-why-title">
-              Why ProCut & Coat
-            </h4>
-            <p className="text-foreground/70 text-base leading-relaxed" data-testid="text-why-description">
-              We've spent years delivering for long-term industrial partners. Now we're bringing that same standard of planning, communication, and quality control to businesses and independent makers.
-            </p>
+        <div className="relative lg:hidden mb-10 -mx-4 sm:-mx-6">
+          <div className="relative h-48 overflow-hidden">
+            <img
+              src={whyPowderCoatImage}
+              alt="Powder coating metal profiles"
+              className="w-full h-full object-cover"
+              data-testid="img-why-powder-mobile"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-card/30 to-transparent" />
           </div>
-          <div>
-            <h4 className="font-heading text-lg font-semibold text-accent mb-4" data-testid="text-delivery-title">
-              Designed for predictable delivery
-            </h4>
-            <p className="text-foreground/70 text-base leading-relaxed" data-testid="text-delivery-description">
-              Clear scheduling, quick feedback, and one accountable team — so your project moves forward without surprises.
-            </p>
+          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-card/30 to-transparent" />
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="hidden lg:block">
+            <img
+              src={whyPowderCoatImage}
+              alt="Powder coating metal profiles"
+              className="w-full h-auto rounded-md object-cover"
+              data-testid="img-why-powder"
+            />
+          </div>
+          <div className="space-y-10">
+            <div>
+              <h4 className="font-heading text-lg font-semibold text-accent mb-4" data-testid="text-why-title">
+                Why ProCut & Coat
+              </h4>
+              <p className="text-foreground/70 text-base leading-relaxed" data-testid="text-why-description">
+                We've spent years delivering for long-term industrial partners. Now we're bringing that same standard of planning, communication, and quality control to businesses and independent makers.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-heading text-lg font-semibold text-accent mb-4" data-testid="text-delivery-title">
+                Designed for predictable delivery
+              </h4>
+              <p className="text-foreground/70 text-base leading-relaxed" data-testid="text-delivery-description">
+                Clear scheduling, quick feedback, and one accountable team — so your project moves forward without surprises.
+              </p>
+            </div>
           </div>
         </div>
       </div>
