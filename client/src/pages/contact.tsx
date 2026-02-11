@@ -26,9 +26,9 @@ function JotFormEmbed() {
 
   useEffect(() => {
     const iframe = document.createElement("iframe");
-    iframe.id = "JotFormIFrame-260395675293064";
+    iframe.id = "JotFormIFrame-260416986417061";
     iframe.title = "Contact & Service Inquiry Form";
-    iframe.src = "https://form.jotform.com/260395675293064";
+    iframe.src = "https://form.jotform.com/260416986417061";
     iframe.style.minWidth = "100%";
     iframe.style.maxWidth = "100%";
     iframe.style.height = "800px";
