@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus, Calendar, CheckSquare, Route } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -50,6 +50,23 @@ function ScrollLaserLine({ direction = "ltr", className = "" }: {
 
 function FullHeroSection() {
   const ref = useScrollReveal<HTMLElement>({ threshold: 0.05 });
+  const videoRef = useCallback((node: HTMLVideoElement | null) => {
+    if (!node) return;
+    node.muted = true;
+    node.play().catch(() => {});
+    const onVisible = () => {
+      if (!document.hidden) {
+        node.muted = true;
+        node.play().catch(() => {});
+      }
+    };
+    const onLoaded = () => {
+      node.muted = true;
+      node.play().catch(() => {});
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    node.addEventListener("loadeddata", onLoaded);
+  }, []);
 
   return (
     <section
@@ -60,6 +77,7 @@ function FullHeroSection() {
     >
       <div className="absolute inset-0 bg-muted overflow-hidden">
         <video
+          ref={videoRef}
           className="w-full h-full object-cover"
           autoPlay
           loop
