@@ -7,6 +7,7 @@ import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import imagePlaceholder2 from "@assets/Image_placeholder_2_1770751942833.jpg";
 import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jpeg";
 import whyPowderCoatImage from "@assets/AdobeStock_1740866468_Large_1770847990943.jpeg";
+import workshopImage from "@assets/AdobeStock_848048449_2_Large_1770848344124.jpeg";
 
 function LaserLine({ direction = "ltr", duration = 5, delay = 0, className = "" }: {
   direction?: "ltr" | "rtl";
@@ -254,9 +255,13 @@ function WorkshopSection() {
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-8 lg:mb-10" data-testid="text-workshop-title">
               Built Tough for Real Workshops
             </h2>
-            <div className="relative rounded-md overflow-hidden aspect-[4/3] bg-muted flex items-center justify-center" data-testid="img-workshop-placeholder">
+            <div className="relative rounded-md overflow-hidden aspect-[4/3]" data-testid="img-workshop">
+              <img
+                src={workshopImage}
+                alt="Worker in protective gear spray coating in workshop"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-              <span className="text-muted-foreground text-sm font-medium z-10">IMAGE_PLACEHOLDER_1</span>
             </div>
           </div>
 
