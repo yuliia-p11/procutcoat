@@ -402,7 +402,7 @@ function PerfectForSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <div>
-            <span className="text-primary text-xs font-medium tracking-widest uppercase mb-4 block" data-testid="text-perfect-label">
+            <span className="text-amber-500 text-xs font-medium tracking-widest uppercase mb-4 block" data-testid="text-perfect-label">
               Perfect for..
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-6 leading-tight" data-testid="text-perfect-title">
@@ -543,11 +543,11 @@ function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-foreground/60 mb-8">
           <div className="flex items-center gap-2" data-testid="text-cta-address">
-            <MapPin className="w-4 h-4 text-primary shrink-0" />
+            <MapPin className="w-4 h-4 text-amber-500 shrink-0" />
             <span><strong className="text-foreground">Address:</strong> 1345 Pine Ave, Orlando, FL 32824</span>
           </div>
           <div className="flex items-center gap-2" data-testid="text-cta-email">
-            <Mail className="w-4 h-4 text-primary shrink-0" />
+            <Mail className="w-4 h-4 text-amber-500 shrink-0" />
             <span><strong className="text-foreground">Email:</strong> info@procutcoat.com</span>
           </div>
         </div>
