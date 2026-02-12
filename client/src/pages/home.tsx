@@ -126,7 +126,8 @@ function TaglineSection() {
     <section ref={ref} id="tagline" className="relative pt-24 sm:pt-28 pb-16 lg:pb-20" data-testid="section-tagline">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-medium text-foreground/80 leading-relaxed max-w-4xl mb-12 lg:mb-16" data-testid="text-tagline">
-          Powder coating, precision cutting, and sheet-metal bending — handled under one roof for faster turnaround, lower total cost, and consistent results.
+          We provide in-house laser cutting, sheet-metal bending, and durable powder coating — all under one roof in Orlando — for faster turnaround, lower total cost, and consistent, professional results.
+          Based in Orlando, Florida, we serve local clients as well as businesses across Florida and beyond.
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -184,8 +185,7 @@ function HeroSection() {
               <span className="text-primary">In One Facility</span>
             </h1>
             <p className="section-child section-child-3 text-foreground/70 text-lg leading-relaxed mb-8" data-testid="text-hero-description">
-              We provide in-house laser cutting, sheet-metal bending, and durable powder coating — all under one roof in Orlando — for faster turnaround, lower total cost, and consistent, professional results.
-              Based in Orlando, Florida, we serve local clients as well as businesses across Florida and beyond.
+              ProCut & Coat streamlines production by combining powder coating, precision cutting, and sheet-metal bending in one Orlando location. That means fewer delays, fewer variables, and a smoother build from start to finish.
             </p>
             <div className="section-child section-child-3 mb-8 lg:mb-0">
               <a href="/contact">
