@@ -103,7 +103,7 @@ function FullHeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 lg:pb-24">
         <h1 className="section-child section-child-1 font-heading text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight max-w-3xl mb-6" data-testid="text-full-hero-title">
-          Full-Service Metal Fabrication & Finishing in Orlando, FL
+          Full-Service Metal Fabrication, Laser Cutting & Powder Coating in Orlando, FL
         </h1>
         <div className="section-child section-child-2">
           <a href="#tagline">
@@ -184,7 +184,8 @@ function HeroSection() {
               <span className="text-primary">In One Facility</span>
             </h1>
             <p className="section-child section-child-3 text-foreground/70 text-lg leading-relaxed mb-8" data-testid="text-hero-description">
-              ProCut & Coat streamlines production by combining powder coating, precision cutting, and sheet-metal bending in one Orlando location. That means fewer delays, fewer variables, and a smoother build from start to finish.
+              We provide in-house laser cutting, sheet-metal bending, and durable powder coating — all under one roof in Orlando — for faster turnaround, lower total cost, and consistent, professional results.
+              Based in Orlando, Florida, we serve local clients as well as businesses across Florida and beyond.
             </p>
             <div className="section-child section-child-3 mb-8 lg:mb-0">
               <a href="/contact">
