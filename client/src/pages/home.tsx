@@ -387,22 +387,6 @@ function HotspotSection() {
           <img src={imagePlaceholder2} alt="Pecica equipment hotspot" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
 
-          {[
-            { top: "25%", left: "20%" },
-            { top: "45%", left: "55%" },
-            { top: "65%", left: "35%" },
-            { top: "40%", left: "75%" },
-          ].map((pos, i) => (
-            <div
-              key={i}
-              className="absolute z-10"
-              style={{ top: pos.top, left: pos.left }}
-              data-testid={`hotspot-dot-${i}`}
-            >
-              <span className="block w-3 h-3 rounded-full bg-primary animate-pulse" />
-              <span className="absolute inset-0 w-3 h-3 rounded-full bg-primary/40 animate-ping" />
-            </div>
-          ))}
         </div>
       </div>
     </section>
@@ -567,7 +551,7 @@ function CTASection() {
           </div>
         </div>
         <a href="/contact">
-          <Button className="bg-accent text-accent-foreground border border-accent-border" data-testid="button-lets-talk">
+          <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-lets-talk">
             Let's Talk!
             <ChevronRight className="w-4 h-4 ml-1" />
           </Button>
