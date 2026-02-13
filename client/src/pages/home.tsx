@@ -128,13 +128,20 @@ function IdentitySection() {
       ref={ref}
       id="identity"
       className="relative py-24 sm:py-28 lg:py-32"
-      style={{ background: "linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.92) 30%, hsl(var(--background) / 0.85) 50%, hsl(var(--background) / 0.92) 70%, hsl(var(--background)) 100%)" }}
       data-testid="section-identity"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-        <p className="text-center text-foreground/75 text-sm sm:text-base leading-loose max-w-[650px]" data-testid="text-identity-blurb">
-          <span className="font-heading font-semibold text-foreground/90">ProCut &amp; Coat</span> is a locally owned and operated job shop located at 1345 Pine Ave, Orlando. We specialize in high-quality metal finishing and fabrication for the Orange County business community, offering a streamlined &ldquo;cut-to-coat&rdquo; workflow that saves our clients time and shipping costs.
-        </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-16">
+          <div className="md:w-48 shrink-0">
+            <span className="font-heading text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-primary" data-testid="text-identity-label">
+              About ProCut &amp; Coat
+            </span>
+          </div>
+          <div className="hidden md:block w-px self-stretch bg-foreground/10" />
+          <p className="text-foreground/70 text-sm sm:text-base font-light leading-loose max-w-[600px]" data-testid="text-identity-blurb">
+            <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> is a locally owned and operated job shop located at 1345 Pine Ave, Orlando. We specialize in high-quality metal finishing and fabrication for the Orange County business community, offering a streamlined &ldquo;cut-to-coat&rdquo; workflow that saves our clients time and shipping costs.
+          </p>
+        </div>
       </div>
     </section>
   );
