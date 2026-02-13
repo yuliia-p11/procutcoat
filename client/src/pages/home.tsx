@@ -231,7 +231,7 @@ function HeroSection() {
               <span className="text-primary">In One Facility</span>
             </h1>
             <p className="section-child section-child-3 text-foreground/70 text-lg leading-relaxed mb-8" data-testid="text-hero-description">
-              ProCut & Coat streamlines production by combining powder coating, precision cutting, and sheet-metal bending in one Orlando location. That means fewer delays, fewer variables, and a smoother build from start to finish.
+              ProCut & Coat streamlines production by combining precision laser cutting, sheet-metal bending, and professional powder coating under one roof. This means fewer delays, fewer variables, and a smoother build from start to finish.
             </p>
             <div className="section-child section-child-3 mb-8 lg:mb-0">
               <a href="/contact">
@@ -291,7 +291,7 @@ function WhySection() {
             </div>
             <div>
               <h4 className="font-heading text-lg font-semibold text-accent mb-4" data-testid="text-delivery-title">
-                Designed for predictable delivery
+                Predictable Metal Fabrication Delivery
               </h4>
               <p className="text-foreground/70 text-base leading-relaxed" data-testid="text-delivery-description">
                 Clear scheduling, quick feedback, and one accountable team — so your project moves forward without surprises.
