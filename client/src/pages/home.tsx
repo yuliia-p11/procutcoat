@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useCallback } from "react";
+import { Helmet } from "react-helmet-async";
 import { ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus, Calendar, CheckSquare, Route } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -585,6 +586,12 @@ function Footer() {
 export default function Home() {
   return (
     <div className="bg-background text-foreground min-h-screen">
+      <Helmet>
+        <title>Powder Coating & Precision Metal Services in Orlando, FL — Pro Cut & Coat</title>
+        <meta name="description" content="Expert powder coating, precision cutting, and sheet metal bending in Orlando, FL. Fast turnaround, quality finishes, and local service." />
+        <meta property="og:title" content="Powder Coating & Precision Metal Services in Orlando, FL — Pro Cut & Coat" />
+        <meta property="og:description" content="Expert powder coating, precision cutting, and sheet metal bending in Orlando, FL. Fast turnaround, quality finishes, and local service." />
+      </Helmet>
       <Header />
       <FullHeroSection />
       <TaglineSection />

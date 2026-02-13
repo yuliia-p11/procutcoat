@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/header";
 import { ArrowUp } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
@@ -87,6 +88,12 @@ function Footer() {
 export default function Contact() {
   return (
     <div className="bg-background text-foreground min-h-screen">
+      <Helmet>
+        <title>Contact Pro Cut & Coat | Powder Coating & Metal Services in Orlando, FL</title>
+        <meta name="description" content="Contact Pro Cut & Coat for professional powder coating, precision cutting, and sheet metal bending in Orlando, FL. Request a quote or speak with our team today." />
+        <meta property="og:title" content="Contact Pro Cut & Coat | Powder Coating & Metal Services in Orlando, FL" />
+        <meta property="og:description" content="Contact Pro Cut & Coat for professional powder coating, precision cutting, and sheet metal bending in Orlando, FL. Request a quote or speak with our team today." />
+      </Helmet>
       <Header />
       <ContactHero />
       <JotFormEmbed />
