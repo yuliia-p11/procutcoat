@@ -339,12 +339,12 @@ function WorkshopSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
             </div>
-            <p className="text-foreground/70 text-base leading-relaxed mt-6" data-testid="text-workshop-description">
-              We support prototypes, custom builds, and small-batch manufacturing with dependable processes and durable finishes. Whether you're a fabrication shop, contractor, studio, or maker — you'll get consistent results and a timeline you can plan around.
-            </p>
           </div>
 
           <div>
+            <p className="text-foreground/70 text-base leading-relaxed mb-8" data-testid="text-workshop-description">
+              We support prototypes, custom builds, and small-batch manufacturing with precision laser cutting, accurate forming, and clean, durable powder-coated finishes. Whether you're a fabrication shop, contractor, studio, or independent maker in the Orlando area, you'll get consistent results and timelines you can plan around.
+            </p>
             <p className="text-foreground font-semibold mb-4">What we're set up for</p>
             <ul className="space-y-2 mb-8">
               {[
