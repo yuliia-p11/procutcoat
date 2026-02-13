@@ -501,27 +501,27 @@ function FAQSection() {
   const faqs = [
     {
       q: "How do I get pricing?",
-      a: "Email us the part details (dimensions, quantity, material, and finish preference). We'll confirm scope and provide a quote.",
+      a: "To receive a quote, email us your part details including dimensions, material, quantity, and desired finish. Our team will review the scope and respond with pricing and next steps.",
     },
     {
       q: "What's the usual turnaround time?",
-      a: "It depends on job complexity and current queue — but our integrated workflow reduces delays because your parts stay in one facility.",
+      a: "Most Orlando laser cutting and powder coating projects are quoted within 24 hours. Because we eliminate the 'transit time' between a machine shop and a coat shop, we typically shave 3\u20135 days off standard industry lead times.",
     },
     {
-      q: "Do you take small jobs and one-offs?",
-      a: "Yes. We work with both commercial partners and independent makers.",
+      q: "Do you take small jobs and one-off projects?",
+      a: "Yes. We support one-off custom builds, prototypes, and small-batch production, as well as repeat jobs for commercial partners and fabrication shops.",
     },
     {
       q: "What finishes do you offer?",
-      a: "Durable powder-coated finishes with consistent, professional results. Share your desired look and use-case and we'll guide you.",
+      a: "We offer durable, professional powder-coated finishes suitable for functional and aesthetic applications. If you have a specific look or use case in mind, we'll help guide finish selection.",
+    },
+    {
+      q: "What materials can you work with?",
+      a: "We commonly work with steel, aluminum, and other sheet metals suitable for laser cutting, forming, and powder coating. Share your material details with your request so we can confirm compatibility.",
     },
     {
       q: "Where are you located?",
-      a: "1345 Pine Ave, Orlando, FL 32824.",
-    },
-    {
-      q: "What's the best way to contact you?",
-      a: "Email: info@procutcoat.com",
+      a: "Our facility is located at 1345 Pine Ave, Orlando, FL 32824, serving Orlando and the surrounding Central Florida area.",
     },
   ];
 
