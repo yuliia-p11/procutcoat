@@ -444,10 +444,10 @@ function PerfectForSection() {
               Perfect for..
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-6 leading-tight" data-testid="text-perfect-title">
-              Perfect for shops, builders, studios — and ambitious makers.
+              Perfect for Orlando-Area Shops, Builders, Studios & Makers
             </h2>
             <p className="text-foreground/70 text-base leading-relaxed mb-10" data-testid="text-perfect-description">
-              Our integrated workflow helps you move faster and avoid coordination headaches. If you need dependable cutting, bending, and powder coating locally in Orlando, we'll make your next run smoother.
+              Our integrated laser cutting, bending, and powder coating workflow helps Central Florida businesses move faster and avoid coordination headaches. If you're looking for dependable local metal fabrication and powder coating in Orlando, ProCut & Coat keeps your projects moving smoothly.
             </p>
             <a href="/contact">
               <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-perfect-contacts">
