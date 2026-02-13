@@ -135,15 +135,18 @@ function IdentitySection() {
     >
       <div className="absolute inset-x-0 top-0 h-px" style={{ background: "linear-gradient(90deg, transparent 10%, hsl(var(--primary) / 0.25) 50%, transparent 90%)" }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-8">
-          <span
-            className="font-heading text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-primary block"
-            style={{ textShadow: "0 0 12px hsl(var(--primary) / 0.3)" }}
-            data-testid="text-identity-label"
-          >
-            About ProCut &amp; Coat
-          </span>
-          <div className="max-w-3xl space-y-5" data-testid="text-identity-blurb">
+        <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-16">
+          <div className="md:w-48 shrink-0">
+            <span
+              className="font-heading text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-primary"
+              style={{ textShadow: "0 0 12px hsl(var(--primary) / 0.3)" }}
+              data-testid="text-identity-label"
+            >
+              About<br className="hidden md:block" /> ProCut &amp; Coat
+            </span>
+          </div>
+          <div className="hidden md:block w-px self-stretch" style={{ background: "linear-gradient(180deg, hsl(var(--foreground) / 0.08), hsl(var(--foreground) / 0.15), hsl(var(--foreground) / 0.08))" }} />
+          <div className="max-w-[640px] space-y-5" data-testid="text-identity-blurb">
             <p
               className="text-foreground/65 text-base sm:text-lg font-light leading-[2] tracking-wide"
               style={{ textShadow: "0 1px 2px hsl(var(--background) / 0.5)" }}
