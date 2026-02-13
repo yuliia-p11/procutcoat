@@ -138,9 +138,14 @@ function IdentitySection() {
             </span>
           </div>
           <div className="hidden md:block w-px self-stretch bg-foreground/10" />
-          <p className="text-foreground/70 text-sm sm:text-base font-light leading-loose max-w-[600px]" data-testid="text-identity-blurb">
-            <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> is a locally owned and operated job shop located at 1345 Pine Ave, Orlando. We specialize in high-quality metal finishing and fabrication for the Orange County business community, offering a streamlined &ldquo;cut-to-coat&rdquo; workflow that saves our clients time and shipping costs.
-          </p>
+          <div className="max-w-[640px] space-y-5" data-testid="text-identity-blurb">
+            <p className="text-foreground/65 text-base sm:text-lg font-light leading-[2]">
+              <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> is a <span className="font-medium text-foreground/90">locally owned and operated</span> job shop located at 1345 Pine Ave, Orlando — specializing in high-quality metal finishing and fabrication for the <span className="font-medium text-foreground/90">Orange County business community</span>.
+            </p>
+            <p className="text-foreground/65 text-base sm:text-lg font-light leading-[2]">
+              Our streamlined <span className="font-medium text-foreground/90">&ldquo;cut-to-coat&rdquo; workflow</span> keeps every step under one roof, saving our clients time and shipping costs.
+            </p>
+          </div>
         </div>
       </div>
     </section>
