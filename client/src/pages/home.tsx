@@ -644,6 +644,14 @@ export default function Home() {
                     "name": "Sheet Metal Bending",
                     "description": "Accurate sheet metal bending and forming for industrial and commercial applications."
                   }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom Metal Design & Engineering",
+                    "description": "Professional design assistance to turn sketches and ideas into technical CAD drawings and manufacture-ready blueprints."
+                  }
                 }
               ]
             }
