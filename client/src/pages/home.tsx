@@ -2,7 +2,6 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 import { ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus, Calendar, CheckSquare, Route } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/header";
 import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
@@ -115,27 +114,15 @@ function FullHeroSection() {
             </Button>
           </a>
         </div>
+        <p className="section-child section-child-3 text-white/75 text-xs sm:text-sm leading-relaxed max-w-[650px] mt-6" data-testid="text-identity-blurb">
+          <span className="font-heading font-semibold text-white/90">ProCut &amp; Coat</span> is a locally owned and operated job shop located at 1345 Pine Ave, Orlando. We specialize in high-quality metal finishing and fabrication for the Orange County business community, offering a streamlined &ldquo;cut-to-coat&rdquo; workflow that saves our clients time and shipping costs.
+        </p>
       </div>
       <LaserLine direction="ltr" duration={5} className="bottom-0 z-20" />
     </section>
   );
 }
 
-function IdentitySection() {
-  const ref = useScrollReveal<HTMLElement>({ exitFade: true });
-
-  return (
-    <section ref={ref} id="identity" className="relative pt-16 sm:pt-20 pb-8 sm:pb-12" data-testid="section-identity">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Card className="bg-card/60 backdrop-blur-sm border-card-border p-6 sm:p-8 max-w-3xl">
-          <p className="text-foreground/80 text-sm sm:text-base leading-relaxed" data-testid="text-identity-blurb">
-            <span className="font-heading font-semibold text-foreground">ProCut &amp; Coat</span> is a locally owned and operated job shop located at 1345 Pine Ave, Orlando. We specialize in high-quality metal finishing and fabrication for the Orange County business community, offering a streamlined &ldquo;cut-to-coat&rdquo; workflow that saves our clients time and shipping costs.
-          </p>
-        </Card>
-      </div>
-    </section>
-  );
-}
 
 function TaglineSection() {
   const ref = useScrollReveal<HTMLElement>({ exitFade: true });
@@ -676,7 +663,6 @@ export default function Home() {
       </Helmet>
       <Header />
       <FullHeroSection />
-      <IdentitySection />
       <TaglineSection />
       <HeroSection />
       <WhySection />
