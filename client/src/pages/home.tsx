@@ -367,6 +367,9 @@ function WorkshopSection() {
             </a>
           </div>
         </div>
+        <p className="text-foreground/70 text-base leading-relaxed mt-10" data-testid="text-workshop-cad">
+          Have an idea but not a finalized design? Our team can assist with CAD preparation, design refinement, and prototype development to help you move from concept to production-ready parts.
+        </p>
       </div>
       <ScrollLaserLine direction="ltr" className="absolute bottom-0 left-0 right-0 z-10" />
     </section>
