@@ -142,7 +142,7 @@ function IdentitySection() {
               style={{ textShadow: "0 0 12px hsl(var(--primary) / 0.3)" }}
               data-testid="text-identity-label"
             >
-              About ProCut &amp; Coat
+              About<br className="hidden md:block" /> ProCut &amp; Coat
             </span>
           </div>
           <div className="hidden md:block w-px self-stretch" style={{ background: "linear-gradient(180deg, hsl(var(--foreground) / 0.08), hsl(var(--foreground) / 0.15), hsl(var(--foreground) / 0.08))" }} />
