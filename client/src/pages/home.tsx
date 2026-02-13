@@ -146,7 +146,7 @@ function IdentitySection() {
             </span>
           </div>
           <div className="hidden md:block w-px self-stretch" style={{ background: "linear-gradient(180deg, hsl(var(--foreground) / 0.08), hsl(var(--foreground) / 0.15), hsl(var(--foreground) / 0.08))" }} />
-          <div className="max-w-[640px] space-y-5 text-right ml-auto" data-testid="text-identity-blurb">
+          <div className="max-w-[640px] space-y-5 text-left md:text-right md:ml-auto" data-testid="text-identity-blurb">
             <p
               className="text-foreground/65 text-base sm:text-lg font-light leading-[2] tracking-wide"
               style={{ textShadow: "0 1px 2px hsl(var(--background) / 0.5)" }}
