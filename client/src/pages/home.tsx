@@ -574,10 +574,10 @@ function CTASection() {
     <section ref={ref} id="contact" className="py-20 lg:py-28 bg-card/30" data-testid="section-cta">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="text-cta-title">
-          Ready to start a project?
+          Ready to start your project?
         </h2>
         <p className="text-foreground/70 text-base leading-relaxed mb-8" data-testid="text-cta-description">
-          Send your part details and timeline — we'll respond with next steps.
+          Submit your part details and timeline. We'll respond promptly with next steps and availability.
         </p>
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-foreground/60 mb-8">
           <div className="flex items-center gap-2" data-testid="text-cta-address">
