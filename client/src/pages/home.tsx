@@ -128,21 +128,35 @@ function IdentitySection() {
       ref={ref}
       id="identity"
       className="relative py-24 sm:py-28 lg:py-32"
+      style={{
+        background: "linear-gradient(170deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.3) 40%, hsl(var(--muted) / 0.15) 70%, hsl(var(--background)) 100%)",
+      }}
       data-testid="section-identity"
     >
+      <div className="absolute inset-x-0 top-0 h-px" style={{ background: "linear-gradient(90deg, transparent 10%, hsl(var(--primary) / 0.25) 50%, transparent 90%)" }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-start gap-8 md:gap-16">
           <div className="md:w-48 shrink-0">
-            <span className="font-heading text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-primary" data-testid="text-identity-label">
+            <span
+              className="font-heading text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-primary"
+              style={{ textShadow: "0 0 12px hsl(var(--primary) / 0.3)" }}
+              data-testid="text-identity-label"
+            >
               About ProCut &amp; Coat
             </span>
           </div>
-          <div className="hidden md:block w-px self-stretch bg-foreground/10" />
+          <div className="hidden md:block w-px self-stretch" style={{ background: "linear-gradient(180deg, hsl(var(--foreground) / 0.08), hsl(var(--foreground) / 0.15), hsl(var(--foreground) / 0.08))" }} />
           <div className="max-w-[640px] space-y-5" data-testid="text-identity-blurb">
-            <p className="text-foreground/65 text-base sm:text-lg font-light leading-[2]">
+            <p
+              className="text-foreground/65 text-base sm:text-lg font-light leading-[2] tracking-wide"
+              style={{ textShadow: "0 1px 2px hsl(var(--background) / 0.5)" }}
+            >
               <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> is a <span className="font-medium text-foreground/90">locally owned and operated</span> job shop located at 1345 Pine Ave, Orlando — specializing in high-quality metal finishing and fabrication for the <span className="font-medium text-foreground/90">Orange County business community</span>.
             </p>
-            <p className="text-foreground/65 text-base sm:text-lg font-light leading-[2]">
+            <p
+              className="text-foreground/65 text-base sm:text-lg font-light leading-[2] tracking-wide"
+              style={{ textShadow: "0 1px 2px hsl(var(--background) / 0.5)" }}
+            >
               Our streamlined <span className="font-medium text-foreground/90">&ldquo;cut-to-coat&rdquo; workflow</span> keeps every step under one roof, saving our clients time and shipping costs.
             </p>
           </div>
