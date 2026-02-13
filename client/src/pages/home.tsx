@@ -591,6 +591,64 @@ export default function Home() {
         <meta name="description" content="Expert powder coating, precision cutting, and sheet metal bending in Orlando, FL. Fast turnaround, quality finishes, and local service." />
         <meta property="og:title" content="Powder Coating & Precision Metal Services in Orlando, FL — Pro Cut & Coat" />
         <meta property="og:description" content="Expert powder coating, precision cutting, and sheet metal bending in Orlando, FL. Fast turnaround, quality finishes, and local service." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Pro Cut & Coat",
+            "description": "Expert powder coating, precision laser cutting, and sheet metal bending services in Orlando, FL. Fast turnaround, quality finishes, and local service.",
+            "url": "https://www.procutcoat.com",
+            "email": "info@procutcoat.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1345 Pine Ave",
+              "addressLocality": "Orlando",
+              "addressRegion": "FL",
+              "postalCode": "32824",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 28.3888,
+              "longitude": -81.3445
+            },
+            "areaServed": {
+              "@type": "State",
+              "name": "Florida"
+            },
+            "additionalType": "http://www.productontology.org/id/Powder_coating",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Metal Fabrication Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Powder Coating",
+                    "description": "Durable, professional-grade powder coating finishes for metal parts and components."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Precision Laser Cutting",
+                    "description": "High-precision laser cutting for custom metal parts and prototypes."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Sheet Metal Bending",
+                    "description": "Accurate sheet metal bending and forming for industrial and commercial applications."
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
       <Header />
       <FullHeroSection />
