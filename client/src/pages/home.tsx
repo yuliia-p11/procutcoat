@@ -133,20 +133,20 @@ function TaglineSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
             {
-              title: "One Roof Workflow",
-              desc: "Cut, bend, and finish without shipping parts between shops.",
+              title: "In-House \"Cut, Bend & Coat\" Workflow",
+              desc: "Cut, bend, and finish your parts in one facility without the delays of shipping between shops.",
             },
             {
               title: "Faster Turnaround",
-              desc: "9 kW of power with circulation fans and Unitronix monitoring cures coats in just 10 minutes. Full cure cycles complete in about 1 hour, delivering smooth, repeatable results every time.",
+              desc: "Our high-efficiency system uses 9 kW of power, circulation fans, and Unitronix monitoring to cure coats in just 10 minutes. Full cure cycles complete in about 1 hour, delivering smooth, repeatable results every time.",
             },
             {
-              title: "Consistent Quality",
-              desc: "Single technical team + controlled process = reliable results.",
+              title: "Professional-Grade, In-House Results",
+              desc: "A single technical team manages every step — from raw metal to final finish. This controlled workflow ensures reliable, industrial-quality results run after run.",
             },
             {
-              title: "Made for Pros & Makers",
-              desc: "From commercial partners to one-off custom builds.",
+              title: "Built for Professionals and Independent Makers",
+              desc: "From industrial partners to one-off custom builds, we bring the same level of discipline, durability, and process control to every project.",
             },
           ].map((item, i) => (
             <a
