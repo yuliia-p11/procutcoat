@@ -348,10 +348,10 @@ function WorkshopSection() {
             <p className="text-foreground font-semibold mb-4">What we're set up for</p>
             <ul className="space-y-2 mb-8">
               {[
-                "Prototypes and custom one-offs",
-                "Small batches and repeat jobs",
+                "Prototypes and custom one-offs metal components",
+                "Small batches and repeat fabrication runs",
                 "Clean, durable powder-coated finishes",
-                "Precision cutting + accurate forming",
+                "Precision laser cutting + accurate sheet-metal forming",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-foreground/70 text-sm" data-testid={`text-setup-item-${i}`}>
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
