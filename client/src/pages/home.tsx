@@ -396,7 +396,7 @@ function VideoSection() {
             },
             {
               title: "Durable Finishes",
-              desc: "Powder-coated results built to last and look professional.",
+              desc: "Powder-coated results built to last, with professional-quality finishes every time.",
               icon: Route,
             },
           ].map((item, i) => (
