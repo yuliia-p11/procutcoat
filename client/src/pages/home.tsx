@@ -382,17 +382,6 @@ function VideoSection() {
   return (
     <section ref={ref} className="py-20 lg:py-28 bg-card/30" data-testid="section-video">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-md overflow-hidden aspect-video bg-muted flex items-center justify-center mb-16" data-testid="video-placeholder">
-          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/20" />
-          <button
-            className="relative z-10 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary/90 flex items-center justify-center transition-all"
-            data-testid="button-play-video"
-          >
-            <Play className="w-6 h-6 sm:w-8 sm:h-8 text-primary-foreground ml-1" />
-          </button>
-          <span className="absolute bottom-6 text-muted-foreground text-sm font-medium z-10">VIDEO_PLACEHOLDER_1</span>
-        </div>
-
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
