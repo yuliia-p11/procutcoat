@@ -464,33 +464,88 @@ function PerfectForSection() {
 }
 
 function StatsSection() {
-  const ref = useScrollReveal<HTMLElement>();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [progress, setProgress] = useState(0);
+
+  const stats = [
+    { value: "50K", label: "Parts coated" },
+    { value: "80%", label: "Average reduction in turnaround time" },
+  ];
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) {
+      setProgress(1);
+      return;
+    }
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          const rect = container.getBoundingClientRect();
+          const scrollableHeight = rect.height - window.innerHeight;
+          if (scrollableHeight <= 0) {
+            setProgress(0);
+            ticking = false;
+            return;
+          }
+          const rawProgress = -rect.top / scrollableHeight;
+          setProgress(Math.max(0, Math.min(1, rawProgress)));
+          ticking = false;
+        });
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const stat1Opacity = progress < 0.3 ? 1 : Math.max(0, 1 - (progress - 0.3) / 0.2);
+  const stat1Y = progress < 0.3 ? 0 : -((progress - 0.3) / 0.2) * 60;
+  const stat1Scale = progress < 0.3 ? 1 : 1 - ((progress - 0.3) / 0.2) * 0.05;
+  const stat2Opacity = progress < 0.4 ? 0 : progress < 0.6 ? (progress - 0.4) / 0.2 : 1;
+  const stat2Y = progress < 0.4 ? 60 : progress < 0.6 ? 60 - ((progress - 0.4) / 0.2) * 60 : 0;
+  const stat2Scale = progress < 0.4 ? 0.95 : progress < 0.6 ? 0.95 + ((progress - 0.4) / 0.2) * 0.05 : 1;
 
   return (
-    <section ref={ref} className="relative py-20 lg:py-28" data-testid="section-stats">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          {[
-            { value: "50K", label: "Parts coated" },
-            { value: "80%", label: "Average reduction in turnaround time" },
-          ].map((stat, i) => (
-            <div
-              key={i}
-              className="relative flex items-center justify-center py-12 sm:py-16"
-              data-testid={`stat-${i}`}
-            >
-              <span className="absolute inset-0 flex items-center justify-center font-heading font-bold text-foreground/[0.07] text-[96px] sm:text-[120px] lg:text-[144px] select-none leading-none">
-                {stat.value}
-              </span>
-              <p className="relative z-10 text-foreground/80 text-sm sm:text-base font-medium text-center max-w-[200px]">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+    <div ref={containerRef} className="relative" style={{ height: "250vh" }} data-testid="section-stats">
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+          {stats.map((stat, i) => {
+            const opacity = i === 0 ? stat1Opacity : stat2Opacity;
+            const translateY = i === 0 ? stat1Y : stat2Y;
+            const scale = i === 0 ? stat1Scale : stat2Scale;
+            return (
+              <div
+                key={i}
+                className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
+                style={{
+                  opacity,
+                  transform: `translateY(${translateY}px) scale(${scale})`,
+                  pointerEvents: opacity > 0.5 ? "auto" : "none",
+                  willChange: "opacity, transform",
+                }}
+                data-testid={`stat-${i}`}
+              >
+                <span className="font-heading font-bold text-foreground text-[72px] sm:text-[96px] lg:text-[120px] leading-none tracking-tight">
+                  {stat.value}
+                </span>
+                <p className="mt-4 text-foreground/60 text-lg sm:text-xl font-medium text-center max-w-[320px]">
+                  {stat.label}
+                </p>
+              </div>
+            );
+          })}
+        <LaserLine direction="ltr" duration={7} delay={1} className="bottom-0" />
       </div>
-      <LaserLine direction="ltr" duration={7} delay={1} className="bottom-0" />
-    </section>
+    </div>
   );
 }
 
