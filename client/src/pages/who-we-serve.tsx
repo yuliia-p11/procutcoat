@@ -64,11 +64,8 @@ function PageHero() {
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-10 lg:pb-12 pt-24 sm:pt-28">
         <h1 className="section-child section-child-1 font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight max-w-3xl" data-testid="text-serve-hero-title">
-          Who We Serve
+          Who We Work With
         </h1>
-        <p className="section-child section-child-2 text-white/70 text-base sm:text-lg mt-3 max-w-2xl" data-testid="text-serve-hero-subtitle">
-          Orlando, FL
-        </p>
       </div>
       <LaserLine direction="ltr" duration={5} className="bottom-0 z-20" />
     </section>
