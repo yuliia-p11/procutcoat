@@ -7,6 +7,8 @@ import { useLocation } from "wouter";
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [location] = useLocation();
+  const isHome = location === "/";
+  const isServices = location === "/metal-fabrication-orlando-fl";
   const isContact = location === "/contact";
 
   return (
@@ -22,10 +24,17 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8" data-testid="nav-desktop">
             <a
               href="/"
-              className={`text-sm font-medium transition-colors ${!isContact ? "text-primary" : "text-foreground/80"}`}
+              className={`text-sm font-medium transition-colors ${isHome ? "text-primary" : "text-foreground/80"}`}
               data-testid="link-home"
             >
               Home
+            </a>
+            <a
+              href="/metal-fabrication-orlando-fl"
+              className={`text-sm font-medium transition-colors ${isServices ? "text-primary" : "text-foreground/80"}`}
+              data-testid="link-services"
+            >
+              Our Services
             </a>
             <a
               href="/contact"
@@ -60,11 +69,19 @@ export function Header() {
             <div className="px-4 py-4 flex flex-col gap-3">
               <a
                 href="/"
-                className={`text-sm font-medium transition-colors py-2 ${!isContact ? "text-primary" : "text-foreground/80"}`}
+                className={`text-sm font-medium transition-colors py-2 ${isHome ? "text-primary" : "text-foreground/80"}`}
                 onClick={() => setMobileOpen(false)}
                 data-testid="link-home-mobile"
               >
                 Home
+              </a>
+              <a
+                href="/metal-fabrication-orlando-fl"
+                className={`text-sm font-medium transition-colors py-2 ${isServices ? "text-primary" : "text-foreground/80"}`}
+                onClick={() => setMobileOpen(false)}
+                data-testid="link-services-mobile"
+              >
+                Our Services
               </a>
               <a
                 href="/contact"
