@@ -142,7 +142,7 @@ function AudiencesSection() {
           Built for Builders
         </h2>
         <p className="text-foreground/70 text-base leading-relaxed mb-14 max-w-3xl" data-testid="text-serve-audiences-desc">
-          We work with fabrication shops, contractors, designers, manufacturers, and makers across the Orlando area who need reliable results from a single facility.
+          We work with fabrication shops, contractors, designers, manufacturers, and makers across the Orlando area and beyond who need reliable metal fabrication and powder coating completed in one facility.
         </p>
 
         <div className="relative">
