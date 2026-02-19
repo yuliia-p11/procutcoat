@@ -9,6 +9,7 @@ export function Header() {
   const [location] = useLocation();
   const isHome = location === "/";
   const isServices = location === "/metal-fabrication-orlando-fl";
+  const isProcess = location === "/our-process";
   const isContact = location === "/contact";
 
   return (
@@ -35,6 +36,13 @@ export function Header() {
               data-testid="link-services"
             >
               Our Services
+            </a>
+            <a
+              href="/our-process"
+              className={`text-sm font-medium transition-colors ${isProcess ? "text-primary" : "text-foreground/80"}`}
+              data-testid="link-process"
+            >
+              Our Process
             </a>
             <a
               href="/contact"
@@ -82,6 +90,14 @@ export function Header() {
                 data-testid="link-services-mobile"
               >
                 Our Services
+              </a>
+              <a
+                href="/our-process"
+                className={`text-sm font-medium transition-colors py-2 ${isProcess ? "text-primary" : "text-foreground/80"}`}
+                onClick={() => setMobileOpen(false)}
+                data-testid="link-process-mobile"
+              >
+                Our Process
               </a>
               <a
                 href="/contact"

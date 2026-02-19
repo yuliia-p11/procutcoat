@@ -4,16 +4,18 @@
 A single-page marketing landing page for ProCut & Coat, a powder coating, precision cutting, and sheet-metal bending facility in Orlando, FL. Dark theme with teal (#7ECEC8) primary and orange (#EFA758) accent colors.
 
 ## Recent Changes
+- 2026-02-19: Added /our-process page with 5-step process content, navigation link, meta tags, and internal cross-links
 - 2026-02-09: Initial build of the landing page with all sections
 
 ## Architecture
 - **Frontend only** - No backend API or database needed
-- Single page at `/` with all content sections
-- Header with Home/Contact links, hamburger menu on mobile
+- Pages: `/` (home), `/metal-fabrication-orlando-fl` (services), `/our-process` (process), `/contact`
+- Header with Home/Our Services/Our Process/Contact links, hamburger menu on mobile
 - Sections: Hero, Why, Workshop, Video, Hotspot Image, Perfect For (stats), FAQ, CTA, Footer
 
 ## Key Files
 - `client/src/pages/home.tsx` - Complete landing page with all sections
+- `client/src/pages/our-process.tsx` - 5-step metal fabrication process page
 - `client/src/App.tsx` - Router setup
 - `client/src/index.css` - Theme colors (dark mode by default)
 - `tailwind.config.ts` - Font families including heading font

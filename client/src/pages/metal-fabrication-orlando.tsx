@@ -89,7 +89,7 @@ function IntroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-foreground/70 text-base sm:text-lg leading-[2] tracking-wide mb-6" data-testid="text-fab-intro-1">
-            <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> is a full-service metal fabrication shop in Orlando, Florida, providing in-house laser cutting, sheet-metal bending, custom metal design support, and professional powder coating. By combining fabrication and finishing under one roof, we help businesses, contractors, and independent makers reduce turnaround time, simplify coordination, and keep projects on schedule.
+            <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> is a full-service metal fabrication shop in Orlando, Florida, providing in-house laser cutting, sheet-metal bending, custom metal design support, and professional powder coating. Through <a href="/our-process" className="text-primary hover:underline">our metal fabrication process</a>, we help businesses, contractors, and independent makers reduce turnaround time, simplify coordination, and keep projects on schedule.
           </p>
           <p className="text-foreground/70 text-base sm:text-lg leading-[2] tracking-wide" data-testid="text-fab-intro-2">
             Whether you need a single prototype, small-batch production, or repeat fabrication runs, our Orlando facility is built for efficient, predictable delivery.
@@ -132,7 +132,7 @@ function PowderCoatingSection() {
               ))}
             </ul>
             <p className="text-foreground/70 text-sm leading-relaxed mb-4" data-testid="text-powder-workflow">
-              Because powder coating is completed in the same facility as cutting and forming, your parts move through production without unnecessary delays or outside vendors. This controlled workflow improves quality control and reduces scheduling variables.
+              Because powder coating is completed in the same facility as cutting and forming, your parts move through production without unnecessary delays or outside vendors. This <a href="/our-process" className="text-primary hover:underline">streamlined in-house workflow</a> improves quality control and reduces scheduling variables.
             </p>
             <p className="text-foreground/70 text-sm leading-relaxed" data-testid="text-powder-cta">
               If you need local powder coating in Orlando for fabricated metal parts, we provide consistent results you can plan around.

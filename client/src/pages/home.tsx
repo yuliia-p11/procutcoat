@@ -157,7 +157,7 @@ function IdentitySection() {
               className="text-foreground/65 text-base sm:text-lg font-light leading-[2] tracking-wide"
               style={{ textShadow: "0 1px 2px hsl(var(--background) / 0.5)" }}
             >
-              Our streamlined <span className="font-medium text-foreground/90">&ldquo;cut-to-coat&rdquo; workflow</span> keeps every step under one roof, saving our clients time and shipping costs.
+              Our <a href="/our-process" className="font-medium text-foreground/90 hover:text-primary transition-colors">&ldquo;cut-to-coat&rdquo; workflow</a> keeps every step under one roof, saving our clients time and shipping costs.
             </p>
           </div>
         </div>
