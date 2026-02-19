@@ -10,6 +10,7 @@ export function Header() {
   const isHome = location === "/";
   const isServices = location === "/metal-fabrication-orlando-fl";
   const isProcess = location === "/our-process";
+  const isWhoWeServe = location === "/who-we-serve";
   const isContact = location === "/contact";
 
   return (
@@ -43,6 +44,13 @@ export function Header() {
               data-testid="link-process"
             >
               Our Process
+            </a>
+            <a
+              href="/who-we-serve"
+              className={`text-sm font-medium transition-colors ${isWhoWeServe ? "text-primary" : "text-foreground/80"}`}
+              data-testid="link-who-we-serve"
+            >
+              Who We Serve
             </a>
             <a
               href="/contact"
@@ -98,6 +106,14 @@ export function Header() {
                 data-testid="link-process-mobile"
               >
                 Our Process
+              </a>
+              <a
+                href="/who-we-serve"
+                className={`text-sm font-medium transition-colors py-2 ${isWhoWeServe ? "text-primary" : "text-foreground/80"}`}
+                onClick={() => setMobileOpen(false)}
+                data-testid="link-who-we-serve-mobile"
+              >
+                Who We Serve
               </a>
               <a
                 href="/contact"
