@@ -198,7 +198,7 @@ function TaglineSection() {
             <a
               key={i}
               href="/contact"
-              className="block bg-card/60 backdrop-blur-sm border border-card-border rounded-md p-5 hover-elevate transition-all group text-center"
+              className="flex flex-col items-center justify-center bg-card/60 backdrop-blur-sm border border-card-border rounded-md p-5 hover-elevate transition-all group text-center"
               data-testid={`card-feature-${i}`}
             >
               <h4 className="font-heading text-sm font-semibold text-primary mb-2">{item.title}</h4>
