@@ -369,11 +369,8 @@ function PerfectForSection() {
     <section ref={ref} className="py-20 lg:py-28 bg-card/30" data-testid="section-fab-perfect">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <span className="text-amber-500 text-xs font-medium tracking-widest uppercase mb-4 block" data-testid="text-fab-perfect-label">
-            Perfect For
-          </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-[47px] font-bold text-foreground mb-6 leading-tight" data-testid="text-fab-perfect-title">
-            Who We Serve
+            Perfect For
           </h2>
           <p className="text-foreground/70 text-base leading-relaxed mb-8" data-testid="text-fab-perfect-desc">
             Our Orlando metal fabrication services are ideal for:
