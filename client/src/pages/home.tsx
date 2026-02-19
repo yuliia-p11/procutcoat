@@ -183,12 +183,8 @@ function TaglineSection() {
               desc: "Cut, bend, and finish your parts in one facility without the delays of shipping between shops.",
             },
             {
-              title: "Faster Turnaround",
-              desc: "Our high-efficiency system uses 9 kW of power, circulation fans, and Unitronix monitoring to cure coats in just 10 minutes. Full cure cycles complete in about 1 hour, delivering smooth, repeatable results every time.",
-            },
-            {
               title: "Professional-Grade, In-House Results",
-              desc: "A single technical team manages every step — from raw metal to final finish. This controlled workflow ensures reliable, industrial-quality results run after run.",
+              desc: "Our high-efficiency system uses 9 kW of power, circulation fans, and Unitronix monitoring to cure coats in just 10 minutes. Full cure cycles complete in about 1 hour, delivering smooth, repeatable results every time.",
             },
             {
               title: "Built for Professionals and Independent Makers",
