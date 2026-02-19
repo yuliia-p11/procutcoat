@@ -92,7 +92,7 @@ function IntroSection() {
             <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> is a full-service metal fabrication shop in Orlando, Florida, providing in-house laser cutting, sheet-metal bending, custom metal design support, and professional powder coating. Through <a href="/our-process" className="text-primary hover:underline">our metal fabrication process</a>, we help businesses, contractors, and independent makers reduce turnaround time, simplify coordination, and keep projects on schedule.
           </p>
           <p className="text-foreground/70 text-base sm:text-lg leading-[2] tracking-wide" data-testid="text-fab-intro-2">
-            Whether you need a single prototype, small-batch production, or repeat fabrication runs, our Orlando facility is built for efficient, predictable delivery.
+            Whether you need a single prototype, small-batch production, or repeat fabrication runs, our Orlando facility is built for efficient, predictable delivery. While our facility is located in Orlando, we support clients throughout Florida and beyond who need reliable metal fabrication and finishing.
           </p>
         </div>
       </div>

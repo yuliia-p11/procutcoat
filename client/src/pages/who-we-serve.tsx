@@ -90,7 +90,7 @@ function IntroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="text-foreground/70 text-base sm:text-lg leading-[2] tracking-wide mb-6" data-testid="text-serve-intro-1">
-            <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> supports a range of Orlando-area businesses and independent builders who need dependable <a href="/metal-fabrication-orlando-fl" className="text-primary hover:underline">metal fabrication, laser cutting, sheet-metal forming, and powder coating</a> completed in one facility.
+            <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> supports businesses throughout Orlando, Central Florida, and beyond who need reliable <a href="/metal-fabrication-orlando-fl" className="text-primary hover:underline">metal fabrication and powder coating</a> completed in one facility.
           </p>
           <p className="text-foreground/70 text-base sm:text-lg leading-[2] tracking-wide" data-testid="text-serve-intro-2">
             If you value predictable scheduling, consistent quality, and clear communication, our shop is built for that.

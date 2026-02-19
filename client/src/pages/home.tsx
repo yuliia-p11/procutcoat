@@ -151,7 +151,7 @@ function IdentitySection() {
               className="text-foreground/65 text-base sm:text-lg font-light leading-[2] tracking-wide"
               style={{ textShadow: "0 1px 2px hsl(var(--background) / 0.5)" }}
             >
-              <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> is a <span className="font-medium text-foreground/90">locally owned and operated</span> job shop located at 1345 Pine Ave, Orlando — specializing in high-quality metal finishing and fabrication for the <span className="font-medium text-foreground/90">Orange County business community</span>.
+              <span className="font-heading font-medium text-foreground/90">ProCut &amp; Coat</span> is a <span className="font-medium text-foreground/90">locally owned and operated</span> job shop located at 1345 Pine Ave, Orlando — specializing in high-quality metal finishing and fabrication for clients across the state and beyond.
             </p>
             <p
               className="text-foreground/65 text-base sm:text-lg font-light leading-[2] tracking-wide"
