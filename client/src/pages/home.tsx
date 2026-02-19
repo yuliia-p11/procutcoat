@@ -173,7 +173,7 @@ function TaglineSection() {
     <section ref={ref} id="tagline" className="relative pt-24 sm:pt-28 pb-16 lg:pb-20" data-testid="section-tagline">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h3 className="font-heading text-xl sm:text-2xl lg:text-3xl font-medium text-foreground/80 leading-relaxed max-w-4xl mb-12 lg:mb-16" data-testid="text-tagline">
-          We provide professional sheet-metal bending, precision cutting, and durable powder coating under one roof. Based in Orlando, we serve local contractors, industrial partners, and custom makers across Central Florida and beyond
+          We provide professional sheet-metal bending, precision cutting, and durable powder coating under one roof.
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
