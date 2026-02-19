@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
 import Home from "@/pages/home";
 import Contact from "@/pages/contact";
+import MetalFabricationOrlando from "@/pages/metal-fabrication-orlando";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -13,6 +14,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/contact" component={Contact} />
+      <Route path="/metal-fabrication-orlando-fl" component={MetalFabricationOrlando} />
       <Route component={NotFound} />
     </Switch>
   );
