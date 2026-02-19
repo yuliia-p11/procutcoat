@@ -466,6 +466,7 @@ function PerfectForSection() {
 function StatsSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
+  const ref = useScrollReveal<HTMLElement>({ exitFade: true });
 
   const stats = [
     { value: "50K", label: "Parts coated" },
@@ -516,36 +517,55 @@ function StatsSection() {
   const stat2Scale = progress < 0.4 ? 0.95 : progress < 0.6 ? 0.95 + ((progress - 0.4) / 0.2) * 0.05 : 1;
 
   return (
-    <div ref={containerRef} className="relative" style={{ height: "250vh" }} data-testid="section-stats">
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-          {stats.map((stat, i) => {
-            const opacity = i === 0 ? stat1Opacity : stat2Opacity;
-            const translateY = i === 0 ? stat1Y : stat2Y;
-            const scale = i === 0 ? stat1Scale : stat2Scale;
-            return (
-              <div
-                key={i}
-                className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
-                style={{
-                  opacity,
-                  transform: `translateY(${translateY}px) scale(${scale})`,
-                  pointerEvents: opacity > 0.5 ? "auto" : "none",
-                  willChange: "opacity, transform",
-                }}
-                data-testid={`stat-${i}`}
-              >
-                <span className="font-heading font-bold text-foreground text-[72px] sm:text-[96px] lg:text-[120px] leading-none tracking-tight">
+    <>
+      <section ref={ref} className="hidden lg:block py-20 lg:py-28" data-testid="section-stats-desktop">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-center gap-16">
+            {stats.map((stat, i) => (
+              <div key={i} className="flex flex-col items-center text-center" data-testid={`stat-desktop-${i}`}>
+                <span className="font-heading font-bold text-foreground text-[96px] lg:text-[120px] leading-none tracking-tight">
                   {stat.value}
                 </span>
-                <p className="mt-4 text-foreground/60 text-lg sm:text-xl font-medium text-center max-w-[320px]">
+                <p className="mt-4 text-foreground/60 text-lg sm:text-xl font-medium max-w-[320px]">
                   {stat.label}
                 </p>
               </div>
-            );
-          })}
-        <LaserLine direction="ltr" duration={7} delay={1} className="bottom-0" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div ref={containerRef} className="relative lg:hidden" style={{ height: "250vh" }} data-testid="section-stats">
+        <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+            {stats.map((stat, i) => {
+              const opacity = i === 0 ? stat1Opacity : stat2Opacity;
+              const translateY = i === 0 ? stat1Y : stat2Y;
+              const scale = i === 0 ? stat1Scale : stat2Scale;
+              return (
+                <div
+                  key={i}
+                  className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
+                  style={{
+                    opacity,
+                    transform: `translateY(${translateY}px) scale(${scale})`,
+                    pointerEvents: opacity > 0.5 ? "auto" : "none",
+                    willChange: "opacity, transform",
+                  }}
+                  data-testid={`stat-${i}`}
+                >
+                  <span className="font-heading font-bold text-foreground text-[72px] sm:text-[96px] leading-none tracking-tight">
+                    {stat.value}
+                  </span>
+                  <p className="mt-4 text-foreground/60 text-lg sm:text-xl font-medium text-center max-w-[320px]">
+                    {stat.label}
+                  </p>
+                </div>
+              );
+            })}
+          <LaserLine direction="ltr" duration={7} delay={1} className="bottom-0" />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
