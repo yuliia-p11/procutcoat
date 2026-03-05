@@ -289,7 +289,7 @@ function Footer() {
     <footer className="py-8 border-t border-border" data-testid="section-footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
         <span className="flex items-center gap-2">
-          <img src={logoImage} alt="ProCut & Coat logo" className="w-6 h-6 rounded-full object-cover" data-testid="img-footer-logo" />
+          <img src={logoImage} alt="ProCut & Coat logo" className="w-8 h-8 rounded-full object-cover" data-testid="img-footer-logo" />
           <span className="font-heading text-sm font-semibold text-foreground/50">
             <span className="text-primary">Pro</span>Cut & Coat
           </span>
