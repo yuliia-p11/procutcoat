@@ -1,9 +1,10 @@
 import { Helmet } from "react-helmet-async";
-import { ChevronRight, ArrowUp, MapPin, Mail, Warehouse, Palette, Factory, Hammer } from "lucide-react";
+import { ChevronRight, ArrowUp, MapPin, Mail, Phone, Warehouse, Palette, Factory, Hammer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/header";
 import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jpeg";
+import logoImage from "@assets/Logo_1772748772942.jpeg";
 
 function LaserLine({ direction = "ltr", duration = 5, delay = 0, className = "" }: {
   direction?: "ltr" | "rtl";
@@ -218,6 +219,10 @@ function CTASection() {
             <Mail className="w-4 h-4 text-amber-500 shrink-0" />
             <span><strong className="text-foreground">Email:</strong> info@procutcoat.com</span>
           </div>
+          <a href="tel:+16892124722" className="flex items-center gap-2 hover:text-foreground/80 transition-colors" data-testid="link-serve-cta-phone">
+            <Phone className="w-4 h-4 text-amber-500 shrink-0" />
+            <span><strong className="text-foreground">Phone:</strong> +1 (689) 212-4722</span>
+          </a>
         </div>
         <a href="/contact">
           <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-serve-contact">
@@ -234,8 +239,11 @@ function Footer() {
   return (
     <footer className="py-8 border-t border-border" data-testid="section-footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
-        <span className="font-heading text-sm font-semibold text-foreground/50">
-          <span className="text-primary">Pro</span>Cut & Coat
+        <span className="flex items-center gap-2">
+          <img src={logoImage} alt="ProCut & Coat logo" className="w-6 h-6 rounded-full object-cover" data-testid="img-footer-logo" />
+          <span className="font-heading text-sm font-semibold text-foreground/50">
+            <span className="text-primary">Pro</span>Cut & Coat
+          </span>
         </span>
         <button
           className="text-foreground/40 text-xs flex items-center gap-1 transition-opacity opacity-70 hover:opacity-100"

@@ -7,6 +7,7 @@ import { Header } from "@/components/header";
 import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import imagePlaceholder2 from "@assets/Image_placeholder_2_1770751942833.jpg";
 import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jpeg";
+import logoImage from "@assets/Logo_1772748772942.jpeg";
 import whyPowderCoatImage from "@assets/AdobeStock_1740866468_Large_1770847990943.jpeg";
 import workshopImage from "@assets/AdobeStock_848048449_2_Large_1770848344124.jpeg";
 
@@ -683,8 +684,11 @@ function Footer() {
   return (
     <footer className="py-8 border-t border-border" data-testid="section-footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
-        <span className="font-heading text-sm font-semibold text-foreground/50">
-          <span className="text-primary">Pro</span>Cut & Coat
+        <span className="flex items-center gap-2">
+          <img src={logoImage} alt="ProCut & Coat logo" className="w-6 h-6 rounded-full object-cover" data-testid="img-footer-logo" />
+          <span className="font-heading text-sm font-semibold text-foreground/50">
+            <span className="text-primary">Pro</span>Cut & Coat
+          </span>
         </span>
         <button
           className="text-foreground/40 text-xs flex items-center gap-1 transition-opacity opacity-70 hover:opacity-100"

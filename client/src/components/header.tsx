@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
+import logoImage from "@assets/Logo_1772748772942.jpeg";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -18,6 +19,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <a href="/" className="flex items-center gap-2" data-testid="link-logo">
+            <img src={logoImage} alt="ProCut & Coat logo" className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" data-testid="img-header-logo" />
             <span className="font-heading text-xl sm:text-2xl font-bold text-foreground tracking-tight">
               <span className="text-primary">Pro</span>Cut & Coat
             </span>

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/header";
 import { ArrowUp, Phone, Mail, MapPin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
+import logoImage from "@assets/Logo_1772748772942.jpeg";
 
 function ContactHero() {
   const ref = useScrollReveal<HTMLElement>({ threshold: 0.05 });
@@ -91,8 +92,11 @@ function Footer() {
   return (
     <footer className="py-8 border-t border-border" data-testid="section-footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-4">
-        <span className="font-heading text-sm font-semibold text-foreground/50">
-          <span className="text-primary">Pro</span>Cut & Coat
+        <span className="flex items-center gap-2">
+          <img src={logoImage} alt="ProCut & Coat logo" className="w-6 h-6 rounded-full object-cover" data-testid="img-footer-logo" />
+          <span className="font-heading text-sm font-semibold text-foreground/50">
+            <span className="text-primary">Pro</span>Cut & Coat
+          </span>
         </span>
         <button
           className="text-foreground/40 text-xs flex items-center gap-1 transition-opacity opacity-70 hover:opacity-100"
