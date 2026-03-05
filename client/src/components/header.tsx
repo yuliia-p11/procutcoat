@@ -19,7 +19,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <a href="/" className="flex items-center gap-2" data-testid="link-logo">
-            <img src={logoImage} alt="ProCut & Coat logo" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover" data-testid="img-header-logo" />
+            <img src={logoImage} alt="ProCut & Coat logo" className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover" data-testid="img-header-logo" />
             <span className="font-heading text-xl sm:text-2xl font-bold text-foreground tracking-tight">
               <span className="text-primary">Pro</span>Cut & Coat
             </span>
