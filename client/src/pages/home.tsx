@@ -7,7 +7,7 @@ import { Header } from "@/components/header";
 import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import imagePlaceholder2 from "@assets/Image_placeholder_2_1770751942833.jpg";
 import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jpeg";
-import logoImage from "@assets/Logo_1772748772942.jpeg";
+import logoImage from "@assets/Logo_1772749444787.jpeg";
 import whyPowderCoatImage from "@assets/AdobeStock_1740866468_Large_1770847990943.jpeg";
 import workshopImage from "@assets/AdobeStock_848048449_2_Large_1770848344124.jpeg";
 

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/header";
 import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jpeg";
-import logoImage from "@assets/Logo_1772748772942.jpeg";
+import logoImage from "@assets/Logo_1772749444787.jpeg";
 
 function LaserLine({ direction = "ltr", duration = 5, delay = 0, className = "" }: {
   direction?: "ltr" | "rtl";
