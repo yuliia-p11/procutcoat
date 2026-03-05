@@ -523,18 +523,18 @@ function StatsSection() {
   return (
     <>
       <section ref={ref} className="hidden lg:block relative overflow-hidden" data-testid="section-stats-desktop">
-        <div className="max-w-7xl mx-auto relative min-h-[400px]">
-          <div className="absolute inset-y-0 left-0 w-[55%]" aria-hidden="true">
+        <div className="relative min-h-[400px]">
+          <div className="absolute inset-y-0 left-0 w-[50%]" aria-hidden="true">
             <img
               src={statsBgImg}
               alt=""
               className="absolute inset-0 w-full h-full object-cover"
-              style={{ opacity: 0.35 }}
+              style={{ opacity: 0.25 }}
             />
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to right, transparent 50%, hsl(var(--background)) 95%)",
+                background: "linear-gradient(to right, transparent 40%, hsl(var(--background)) 85%)",
               }}
             />
             <div
@@ -551,8 +551,8 @@ function StatsSection() {
             />
           </div>
 
-          <div className="relative flex items-center justify-end py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
-            <div className="flex items-baseline justify-center gap-20 w-[50%] border-l border-foreground/10 pl-12">
+          <div className="relative max-w-5xl mx-auto flex items-center justify-end py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
+            <div className="flex items-baseline justify-center gap-20 w-2/3">
               {stats.map((stat, i) => (
                 <div key={i} className="flex flex-col items-center text-center" data-testid={`stat-desktop-${i}`}>
                   <span className="font-heading font-bold text-foreground text-[96px] lg:text-[120px] leading-none tracking-tight">
