@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
-import logoImage from "@assets/Logo_1772749444787.jpeg";
+import logoImage from "@assets/ChatGPT_Image_Mar_5,_2026,_05_42_40_PM_1772751680095.png";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,7 +17,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-20 sm:h-24 py-2">
           <a href="/" className="flex items-center gap-2" data-testid="link-logo">
             <img src={logoImage} alt="ProCut & Coat logo" className="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover" data-testid="img-header-logo" />
             <span className="font-heading text-xl sm:text-2xl font-bold text-foreground tracking-tight">

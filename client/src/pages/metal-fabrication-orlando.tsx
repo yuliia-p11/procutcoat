@@ -6,7 +6,7 @@ import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jpeg";
 import whyPowderCoatImage from "@assets/AdobeStock_1740866468_Large_1770847990943.jpeg";
 import workshopImage from "@assets/AdobeStock_848048449_2_Large_1770848344124.jpeg";
-import logoImage from "@assets/Logo_1772749444787.jpeg";
+import logoImage from "@assets/ChatGPT_Image_Mar_5,_2026,_05_42_40_PM_1772751680095.png";
 
 function LaserLine({ direction = "ltr", duration = 5, delay = 0, className = "" }: {
   direction?: "ltr" | "rtl";
