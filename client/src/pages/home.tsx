@@ -524,23 +524,23 @@ function StatsSection() {
     <>
       <section ref={ref} className="hidden lg:block relative overflow-hidden" data-testid="section-stats-desktop">
         <div className="relative min-h-[400px]">
-          <div className="absolute inset-y-0 left-0 w-[50%]" aria-hidden="true">
+          <div className="absolute inset-y-0 left-0 w-[65%]" aria-hidden="true">
             <img
               src={statsBgImg}
               alt=""
               className="absolute inset-0 w-full h-full object-cover"
-              style={{ opacity: 0.25 }}
+              style={{ opacity: 0.3 }}
             />
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to right, transparent 40%, hsl(var(--background)) 85%)",
+                background: "linear-gradient(to right, transparent 55%, hsl(var(--background)) 100%)",
               }}
             />
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to left, transparent 70%, hsl(var(--background)) 100%)",
+                background: "linear-gradient(to left, transparent 80%, hsl(var(--background)) 100%)",
               }}
             />
             <div
