@@ -10,6 +10,7 @@ import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jp
 import logoImage from "@assets/Logo_1772749444787.jpeg";
 import whyPowderCoatImage from "@assets/AdobeStock_1740866468_Large_1770847990943.jpeg";
 import workshopImage from "@assets/AdobeStock_848048449_2_Large_1770848344124.jpeg";
+import statsBgImage from "@assets/AdobeStock_955805865_Large-compressed_1772750478486.jpg";
 
 function LaserLine({ direction = "ltr", duration = 5, delay = 0, className = "" }: {
   direction?: "ltr" | "rtl";
@@ -474,6 +475,8 @@ function StatsSection() {
     { value: "80%", label: "Average reduction in turnaround time" },
   ];
 
+  const statsBgImg = statsBgImage;
+
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -519,25 +522,65 @@ function StatsSection() {
 
   return (
     <>
-      <section ref={ref} className="hidden lg:block py-20 lg:py-28" data-testid="section-stats-desktop">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-16">
-            {stats.map((stat, i) => (
-              <div key={i} className="flex flex-col items-center text-center" data-testid={`stat-desktop-${i}`}>
-                <span className="font-heading font-bold text-foreground text-[96px] lg:text-[120px] leading-none tracking-tight">
-                  {stat.value}
-                </span>
-                <p className="mt-4 text-foreground/60 text-lg sm:text-xl font-medium max-w-[320px]">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
+      <section ref={ref} className="hidden lg:block relative overflow-hidden" data-testid="section-stats-desktop">
+        <div className="max-w-7xl mx-auto relative min-h-[400px]">
+          <div className="absolute inset-y-0 left-0 w-[40%]" aria-hidden="true">
+            <img
+              src={statsBgImg}
+              alt=""
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ opacity: 0.35 }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to right, transparent 20%, hsl(var(--background)) 100%)",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to left, transparent 50%, hsl(var(--background)) 100%)",
+              }}
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 15%, transparent 85%, hsl(var(--background)) 100%)",
+              }}
+            />
+          </div>
+
+          <div className="relative flex items-center justify-end gap-16 py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-center gap-16 w-[60%]">
+              {stats.map((stat, i) => (
+                <div key={i} className="flex flex-col items-center text-center" data-testid={`stat-desktop-${i}`}>
+                  <span className="font-heading font-bold text-foreground text-[96px] lg:text-[120px] leading-none tracking-tight">
+                    {stat.value}
+                  </span>
+                  <p className="mt-4 text-foreground/60 text-lg sm:text-xl font-medium max-w-[320px]">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       <div ref={containerRef} className="relative lg:hidden" style={{ height: "250vh" }} data-testid="section-stats">
         <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 z-0" aria-hidden="true">
+              <img
+                src={statsBgImg}
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{
+                  opacity: 0.12,
+                  filter: "blur(3px) brightness(0.4)",
+                }}
+              />
+            </div>
             {stats.map((stat, i) => {
               const opacity = i === 0 ? stat1Opacity : stat2Opacity;
               const translateY = i === 0 ? stat1Y : stat2Y;
@@ -545,7 +588,7 @@ function StatsSection() {
               return (
                 <div
                   key={i}
-                  className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
+                  className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
                   style={{
                     opacity,
                     transform: `translateY(${translateY}px) scale(${scale})`,
