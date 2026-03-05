@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/header";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Phone } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 function ContactHero() {
@@ -16,6 +16,14 @@ function ContactHero() {
         <p className="section-child section-child-2 text-foreground/70 text-lg leading-relaxed max-w-2xl" data-testid="text-contact-subtitle">
           Have a project in mind? Fill out the form below and our team will get back to you with next steps, pricing, and timelines.
         </p>
+        <a
+          href="tel:+16892124722"
+          className="section-child section-child-3 inline-flex items-center gap-2 mt-4 text-primary hover:text-primary/80 font-semibold text-lg transition-colors"
+          data-testid="link-phone-number"
+        >
+          <Phone className="w-5 h-5" />
+          +1 (689) 212-4722
+        </a>
       </div>
     </section>
   );

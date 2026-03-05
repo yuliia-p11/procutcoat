@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
-import { ChevronRight, Play, MapPin, Mail, ArrowUp, Minus, Plus, Calendar, CheckSquare, Route } from "lucide-react";
+import { ChevronRight, Play, MapPin, Mail, Phone, ArrowUp, Minus, Plus, Calendar, CheckSquare, Route } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/header";
@@ -663,6 +663,10 @@ function CTASection() {
             <Mail className="w-4 h-4 text-amber-500 shrink-0" />
             <span><strong className="text-foreground">Email:</strong> info@procutcoat.com</span>
           </div>
+          <a href="tel:+16892124722" className="flex items-center gap-2 hover:text-foreground/80 transition-colors" data-testid="link-cta-phone">
+            <Phone className="w-4 h-4 text-amber-500 shrink-0" />
+            <span><strong className="text-foreground">Phone:</strong> +1 (689) 212-4722</span>
+          </a>
         </div>
         <a href="/contact">
           <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-lets-talk">
