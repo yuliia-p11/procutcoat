@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
-import logoImage from "@assets/ChatGPT_Image_Mar_5,_2026,_05_42_40_PM_1772751680095.png";
+import logoImage from "@assets/ChatGPT_Image_Mar_5,_2026,_05_42_40_PM_1772752027132.png";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
