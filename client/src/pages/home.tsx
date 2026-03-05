@@ -524,7 +524,7 @@ function StatsSection() {
     <>
       <section ref={ref} className="hidden lg:block relative overflow-hidden" data-testid="section-stats-desktop">
         <div className="max-w-7xl mx-auto relative min-h-[400px]">
-          <div className="absolute inset-y-0 left-0 w-[40%]" aria-hidden="true">
+          <div className="absolute inset-y-0 left-0 w-[55%]" aria-hidden="true">
             <img
               src={statsBgImg}
               alt=""
@@ -534,25 +534,25 @@ function StatsSection() {
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to right, transparent 20%, hsl(var(--background)) 100%)",
+                background: "linear-gradient(to right, transparent 50%, hsl(var(--background)) 95%)",
               }}
             />
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to left, transparent 50%, hsl(var(--background)) 100%)",
+                background: "linear-gradient(to left, transparent 70%, hsl(var(--background)) 100%)",
               }}
             />
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 15%, transparent 85%, hsl(var(--background)) 100%)",
+                background: "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 20%, transparent 80%, hsl(var(--background)) 100%)",
               }}
             />
           </div>
 
-          <div className="relative flex items-center justify-end gap-16 py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-center gap-16 w-[60%]">
+          <div className="relative flex items-center justify-end py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
+            <div className="flex items-baseline justify-center gap-20 w-[50%] border-l border-foreground/10 pl-12">
               {stats.map((stat, i) => (
                 <div key={i} className="flex flex-col items-center text-center" data-testid={`stat-desktop-${i}`}>
                   <span className="font-heading font-bold text-foreground text-[96px] lg:text-[120px] leading-none tracking-tight">
@@ -578,6 +578,7 @@ function StatsSection() {
                 style={{
                   opacity: 0.12,
                   filter: "blur(3px) brightness(0.4)",
+                  objectPosition: "70% center",
                 }}
               />
             </div>
