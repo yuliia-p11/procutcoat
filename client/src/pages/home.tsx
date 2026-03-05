@@ -534,7 +534,7 @@ function StatsSection() {
             <div
               className="absolute inset-0"
               style={{
-                background: "linear-gradient(to right, transparent 55%, hsl(var(--background)) 100%)",
+                background: "linear-gradient(to right, transparent 35%, hsl(var(--background) / 0.4) 55%, hsl(var(--background) / 0.75) 70%, hsl(var(--background)) 90%)",
               }}
             />
             <div
