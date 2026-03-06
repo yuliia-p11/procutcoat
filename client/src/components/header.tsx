@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
-import logoImage from "@assets/image_1772839798508.png";
+import logoImage from "@assets/logo_cropped.png";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
