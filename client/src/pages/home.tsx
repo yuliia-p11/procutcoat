@@ -555,7 +555,7 @@ function StatsSection() {
             <div className="flex items-baseline justify-center gap-20 w-2/3">
               {stats.map((stat, i) => (
                 <div key={i} className="flex flex-col items-center text-center" data-testid={`stat-desktop-${i}`}>
-                  <span className="font-heading font-bold text-foreground text-[96px] lg:text-[120px] leading-none tracking-tight">
+                  <span className="font-heading font-bold text-foreground/60 text-[96px] lg:text-[120px] leading-none tracking-tight">
                     {stat.value}
                   </span>
                   <p className="mt-4 text-foreground/60 text-lg sm:text-xl font-medium max-w-[320px]">
@@ -598,7 +598,7 @@ function StatsSection() {
                   }}
                   data-testid={`stat-${i}`}
                 >
-                  <span className="font-heading font-bold text-foreground text-[72px] sm:text-[96px] leading-none tracking-tight">
+                  <span className="font-heading font-bold text-foreground/60 text-[72px] sm:text-[96px] leading-none tracking-tight">
                     {stat.value}
                   </span>
                   <p className="mt-4 text-foreground/60 text-lg sm:text-xl font-medium text-center max-w-[320px]">
