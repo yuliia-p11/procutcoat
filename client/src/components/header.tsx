@@ -15,7 +15,7 @@ export function Header() {
   const isContact = location === "/contact";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#3B3B3B] border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 sm:h-24 py-2">
           <a href="/" className="flex items-center gap-2" data-testid="link-logo">
@@ -81,7 +81,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-border"
+            className="md:hidden bg-[#3B3B3B] border-b border-border"
             data-testid="nav-mobile"
           >
             <div className="px-4 py-4 flex flex-col gap-3">
