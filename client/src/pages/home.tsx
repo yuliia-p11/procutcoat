@@ -7,7 +7,7 @@ import { Header } from "@/components/header";
 import { useScrollReveal, useLaserReveal } from "@/hooks/use-scroll-reveal";
 import imagePlaceholder2 from "@assets/Image_placeholder_2_1770751942833.jpg";
 import heroMetalImage from "@assets/AdobeStock_1491690900_Large_1770847813495.jpeg";
-import logoImage from "@assets/ChatGPT_Image_Mar_5,_2026,_05_42_40_PM_1772752027132.png";
+import logoImage from "@assets/logo_cropped.png";
 import whyPowderCoatImage from "@assets/AdobeStock_1740866468_Large_1770847990943.jpeg";
 import workshopImage from "@assets/AdobeStock_848048449_2_Large_1770848344124.jpeg";
 import statsBgImage from "@assets/AdobeStock_955805865_Large-compressed_1772750478486.jpg";

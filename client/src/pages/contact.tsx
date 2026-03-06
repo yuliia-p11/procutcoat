@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/header";
 import { ArrowUp, Phone, Mail, MapPin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import logoImage from "@assets/ChatGPT_Image_Mar_5,_2026,_05_42_40_PM_1772752027132.png";
+import logoImage from "@assets/logo_cropped.png";
 
 function ContactHero() {
   const ref = useScrollReveal<HTMLElement>({ threshold: 0.05 });
