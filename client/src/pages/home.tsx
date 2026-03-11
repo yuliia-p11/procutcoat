@@ -577,8 +577,8 @@ function StatsSection() {
                 alt=""
                 className="absolute inset-0 w-full h-full object-cover"
                 style={{
-                  opacity: 0.18,
-                  filter: "blur(3px) brightness(0.4)",
+                  opacity: 0.38,
+                  filter: "blur(2px) brightness(0.55)",
                   objectPosition: "70% center",
                 }}
               />
