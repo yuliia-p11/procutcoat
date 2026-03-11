@@ -700,7 +700,13 @@ function CTASection() {
         <p className="text-foreground/70 text-base leading-relaxed mb-8" data-testid="text-cta-description">
           Submit your part details and timeline. We'll respond promptly with next steps and availability.
         </p>
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-foreground/60 mb-8">
+        <a href="/contact">
+          <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-lets-talk">
+            Let's Talk!
+            <ChevronRight className="w-4 h-4 ml-1" />
+          </Button>
+        </a>
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-sm text-foreground/60 mt-8">
           <div className="flex items-center gap-2" data-testid="text-cta-address">
             <MapPin className="w-4 h-4 text-amber-500 shrink-0" />
             <span><strong className="text-foreground">Address:</strong> 1345 Pine Ave, Orlando, FL 32824</span>
@@ -713,17 +719,11 @@ function CTASection() {
             <Phone className="w-4 h-4 text-amber-500 shrink-0" />
             <span><strong className="text-foreground">Phone:</strong> +1 (689) 212-4722</span>
           </a>
-          <a href="https://www.facebook.com/procutcoat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-foreground/80 transition-colors" data-testid="link-cta-facebook">
-            <SiFacebook className="w-4 h-4 text-amber-500 shrink-0" />
-            <span><strong className="text-foreground">Facebook:</strong> procutcoat</span>
+          <a href="https://www.facebook.com/procutcoat" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-2 hover:text-foreground/80 transition-colors" data-testid="link-cta-facebook">
+            <SiFacebook className="w-4 h-4 text-amber-500 shrink-0 transition-colors group-hover:[color:#1877F2]" />
+            <span><strong className="text-foreground">Facebook:</strong> @procutcoat</span>
           </a>
         </div>
-        <a href="/contact">
-          <Button className="bg-primary text-primary-foreground border border-primary-border" data-testid="button-lets-talk">
-            Let's Talk!
-            <ChevronRight className="w-4 h-4 ml-1" />
-          </Button>
-        </a>
       </div>
     </section>
   );
