@@ -580,6 +580,7 @@ function StatsSection() {
                   opacity: 0.38,
                   filter: "blur(2px) brightness(0.55)",
                   objectPosition: "70% center",
+                  transform: "translateY(20px)",
                 }}
               />
             </div>
