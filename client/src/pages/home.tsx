@@ -579,7 +579,7 @@ function StatsSection() {
                 style={{
                   opacity: 0.38,
                   filter: "blur(2px) brightness(0.55)",
-                  objectPosition: "70% center",
+                  objectPosition: "center center",
                 }}
               />
             </div>
