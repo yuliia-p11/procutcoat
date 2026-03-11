@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/header";
 import { ArrowUp, Phone, Mail, MapPin } from "lucide-react";
+import { SiFacebook } from "react-icons/si";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import logoImage from "@assets/logo_cropped.png";
 
@@ -38,6 +39,10 @@ function ContactHero() {
             <MapPin className="w-4 h-4 text-primary shrink-0" />
             <span><strong className="text-foreground">Address:</strong> 1345 Pine Ave, Orlando, FL 32824</span>
           </div>
+          <a href="https://www.facebook.com/procutcoat" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 hover:text-foreground/80 transition-colors" data-testid="link-contact-facebook">
+            <SiFacebook className="w-4 h-4 text-primary shrink-0 transition-colors group-hover:[color:#1877F2]" />
+            <span><strong className="text-foreground">Facebook:</strong> @procutcoat</span>
+          </a>
         </div>
       </div>
     </section>
