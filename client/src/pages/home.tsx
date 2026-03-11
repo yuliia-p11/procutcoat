@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Helmet } from "react-helmet-async";
 import { ChevronRight, Play, MapPin, Mail, Phone, ArrowUp, Minus, Plus, Calendar, CheckSquare, Route } from "lucide-react";
+import { SiFacebook } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/header";
@@ -711,6 +712,10 @@ function CTASection() {
           <a href="tel:+16892124722" className="flex items-center gap-2 hover:text-foreground/80 transition-colors" data-testid="link-cta-phone">
             <Phone className="w-4 h-4 text-amber-500 shrink-0" />
             <span><strong className="text-foreground">Phone:</strong> +1 (689) 212-4722</span>
+          </a>
+          <a href="https://www.facebook.com/procutcoat" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-foreground/80 transition-colors" data-testid="link-cta-facebook">
+            <SiFacebook className="w-4 h-4 text-amber-500 shrink-0" />
+            <span><strong className="text-foreground">Facebook:</strong> procutcoat</span>
           </a>
         </div>
         <a href="/contact">
