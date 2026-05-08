@@ -425,7 +425,7 @@ function CTASection() {
           </div>
           <div className="flex items-center gap-2" data-testid="text-fab-cta-email">
             <Mail className="w-4 h-4 text-amber-500 shrink-0" />
-            <span><strong className="text-foreground">Email:</strong> info@procutcoat.com</span>
+            <a href="mailto:info@procutcoat.com" className="hover:text-foreground/80 transition-colors"><strong className="text-foreground">Email:</strong> info@procutcoat.com</a>
           </div>
           <a href="tel:+16892124722" className="flex items-center gap-2 hover:text-foreground/80 transition-colors" data-testid="link-fab-cta-phone">
             <Phone className="w-4 h-4 text-amber-500 shrink-0" />
